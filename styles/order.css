@@ -1,0 +1,123 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  height: fit-content;
+  width: 65%;
+  margin-bottom: 10vh;
+}
+
+.orderDetailsContainer h1 {
+  text-align: center;
+  font-size: 1.7vw;
+  color: #065577;
+}
+
+.orderDetailsContainer h2 {
+  text-align: left;
+  font-size: 1.4vw;
+}
+
+.orderDetailsContainer .orderDetails {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.orderDetailsContainer .orderDetails table {
+  border-collapse: collapse;
+}
+
+.orderDetailsContainer .orderDetails table tr {
+  text-align: left;
+}
+
+.orderDetailsContainer .orderDetails table tr th, .orderDetailsContainer .orderDetails table tr td {
+  border: 1px solid #898888;
+  padding-left: 1vw;
+  font-size: 1.2vw;
+}
+
+.orderDetailsContainer .orderDetails .imgDiv {
+  padding: 1.2vw .7vw;
+  border: 1px solid #898888;
+  margin-left: -1px;
+  text-align: center;
+}
+
+.orderDetailsContainer .orderDetails img {
+  width: 15vw;
+  height: 12vw;
+  object-fit: cover;
+}
+
+.orderDetailsContainer .customerDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+form .inp-box {
+  position: relative;
+  margin-top: 1vw;
+}
+
+form input {
+  width: 100%;
+  padding: 6px 0;
+  font-size: 1.5vw;
+  min-width: 60px;
+  margin: 1.5vh 0;
+  border: none;
+  border-bottom: 1px solid #24262b;
+  border-right: 1px solid #24262b;
+  outline: none;
+  resize: none;
+  border-radius: 1.2vw;
+  transition: .5s ease-in;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.26);
+}
+
+form input:hover {
+  background: #dedede70;
+}
+
+form span {
+  position: absolute;
+  left: 2px;
+  top: -2px;
+  padding: 5px 0;
+  font-size: 1.2vw;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: .5s;
+  color: #666;
+}
+
+form input:focus ~ span,
+form input:valid ~ span {
+  color: #ff8c00;
+  font-size: 1.1vw;
+  transform: translateY(-1.6vw);
+}
+
+form .btn {
+  background: red;
+  color: white;
+  padding: 1vw;
+  cursor: pointer;
+  width: 40%;
+  margin-top: 1vw;
+  font-size: 1.3vw;
+  transition: .2s ease;
+  border-radius: 1vw;
+  text-decoration: none;
+}
+
+form .btn:hover {
+  opacity: .85;
+}
