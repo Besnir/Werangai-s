@@ -14,3 +14,31 @@ function closeSidebar() {
     sidebarOpen = false;
   }
 }
+
+
+//Copy and Share affiliate link
+
+function copyLink() {
+  const link = document.querySelector('.loweraffiliateLink').innerText;
+  navigator.clipboard.writeText(link).then(() => {
+      alert('Link copied to clipboard!');
+  }).catch(err => {
+      console.error('Error copying link: ', err);
+  });
+}
+
+function shareLink() {
+  const link = document.querySelector('.loweraffiliateLink').innerText;
+  if (navigator.share) {
+      navigator.share({
+          title: 'Check out my referral link!',
+          url: link
+      }).then(() => {
+          console.log('Thanks for sharing!');
+      }).catch(err => {
+          console.error('Error sharing link: ', err);
+      });
+  } else {
+      alert('Sharing not supported on this browser.');
+  }
+}

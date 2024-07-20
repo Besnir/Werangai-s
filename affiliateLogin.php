@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = 'Email and password are required.';
     } else {
         // Prepare SQL statement to prevent SQL injection
-        $stmt = $conn->prepare("SELECT id, password FROM AffUsers WHERE email = ?");
+        $stmt = $conn->prepare("SELECT user_id, user_password FROM affiliate_users WHERE email = ?");
         if ($stmt) {
             $stmt->bind_param("s", $email);
             $stmt->execute();
@@ -54,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Close the database connection
     $conn->close();
 }
+
 ?>
 
 <!DOCTYPE html>

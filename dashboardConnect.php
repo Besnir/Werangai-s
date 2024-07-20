@@ -26,9 +26,11 @@ $lastName = ucfirst($lastName);
 // Check if affiliate user is logged in
 $affiliate_user_id = isset($_SESSION['affiliate_user_id']) ? $_SESSION['affiliate_user_id'] : null;
 
+$affUsername ='';
+
 if ($affiliate_user_id) {
   // Fetch affiliate user data
-  $stmt = $conn->prepare("SELECT username FROM AffUsers WHERE id = ?");
+  $stmt = $conn->prepare("SELECT username FROM affiliate_users WHERE user_id = ?");
   $stmt->bind_param("i", $affiliate_user_id);
   $stmt->execute();
   $stmt->bind_result($affUsername);
@@ -36,5 +38,5 @@ if ($affiliate_user_id) {
   $stmt->close();
 }
 
-$conn->close();
+$affUsername = ucfirst($affUsername);
 ?>

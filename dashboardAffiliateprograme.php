@@ -1,13 +1,40 @@
 <?php
 include 'dashboardConnect.php';
-session_start();
 
 // Check if the user is logged in
-if (!isset($_SESSION['affiliate_user_id'])) {
-    // If not, redirect to the login page
+if (!isset($_SESSION['affiliate_user_id']) || empty($_SESSION['affiliate_user_id'])) {
     header("Location: affiliateLogin.php");
     exit();
 }
+
+$user_id = $_SESSION['affiliate_user_id'];
+
+// Fetch direct referrals count (assuming you have a referrer_id column)
+$stmt = $conn->prepare("SELECT COUNT(*) FROM affiliate_users WHERE referrer_id = ?");
+if ($stmt) {
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $stmt->bind_result($direct_referrals);
+    $stmt->fetch();
+    $stmt->close();
+}
+
+// Fetch referral earnings
+$stmt = $conn->prepare("SELECT SUM(referral_earnings) FROM affiliate_users WHERE referrer_id = ?");
+if ($stmt) {
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $stmt->bind_result($referral_earnings);
+    $stmt->fetch();
+    $stmt->close();
+}
+
+// Generate referral link
+$referral_link = "https://www.bemula.ke/signup.php?referral_code=" . urlencode($user_id);
+
+//$referral_link = "http://localhost/werangai's/affiliateSingUp.php?referral_code=" . urlencode($user_id);
+
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -159,14 +186,14 @@ if (!isset($_SESSION['affiliate_user_id'])) {
           <i class="fa-solid fa-people-group"></i>
         </div>
 
-        <h1> Welcome Back: <span><?php echo $affUsername; ?></span></h1>
+        <h1> Welcome Back: <span><?php echo htmlspecialchars($affUsername); ?></span></h1>
 
         <div class="affiliate-layout">
           <div class="card">
             <div class="affidesc">
               <h3>DIRECT&nbsp;REFERRALS</h3>
               <p>Your team</p>
-              <h2>0</h2>
+              <h2><?php echo $direct_referrals; ?></h2>
             </div>
 
             <i class="fa-solid fa-people-group fa-2x"></i>
@@ -176,7 +203,7 @@ if (!isset($_SESSION['affiliate_user_id'])) {
             <div class="affidesc">
               <h3>BALANCE</h3>
               <p>Available balance</p>
-              <h2>KSH. 0</h2>
+              <h2>$. <?php echo number_format($referral_earnings, 2); ?></h2>
             </div>
 
             <i class="fa-solid fa-money-check-dollar fa-2x"></i>
@@ -186,7 +213,7 @@ if (!isset($_SESSION['affiliate_user_id'])) {
             <div class="affidesc">
               <h3>WITHDRAWN</h3>
               <p>Money out</p>
-              <h2>KSH. 0</h2>
+              <h2>$. 0</h2>
             </div>
 
             <i class="fa-regular fa-money-bill-1 fa-2x"></i>
@@ -196,7 +223,7 @@ if (!isset($_SESSION['affiliate_user_id'])) {
             <div class="affidesc">
               <h3>PROCESSING</h3>
               <p>Pending request...</p>
-              <h2>KSH. 0</h2>
+              <h2>$. 0</h2>
             </div>
 
             <i class="fa-solid fa-recycle fa-2x"></i>
@@ -206,7 +233,7 @@ if (!isset($_SESSION['affiliate_user_id'])) {
             <div class="affidesc">
               <h3>BONUS</h3>
               <p>Bonus</p>
-              <h2>KSH. 0</h2>
+              <h2>$. 0</h2>
             </div>
 
             <i class="fa-solid fa-gift fa-2x"></i>
@@ -214,10 +241,10 @@ if (!isset($_SESSION['affiliate_user_id'])) {
         </div>
         <div class="loweraffiliate">
           <h4>YOUR&nbsp;REFFERAL&nbsp;LINK:</h4>
-          <P class="loweraffiliateLink">https//www.betrades.ke/sshp/php?</P>
+          <p class="loweraffiliateLink"><?php echo htmlspecialchars($referral_link); ?></p>
           <div class="linkbtn">
-            <button class="copy-btn">Copy&nbsp;Link</button>
-            <button class="sharebtn">Share</button>
+            <button class="copy-btn" onclick="copyLink()">Copy&nbsp;Link</button>
+            <button class="sharebtn" onclick="shareLink()">Share</button>
           </div>
           <h3>
             HOORAY🥳! YOU'VE REACHED THE MINIMUM WITHDRAW AMOUNT! YOU CAN NOW PROCEED WITH YOUR WITHDRAWAL. SIMPLY CLICK ON THE WITHDRAWAL BUTTON BELOW TO ACCESS YOUR FUNDS. THANK YOU FOR CHOOSING OUR SERVICES!.

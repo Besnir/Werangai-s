@@ -1,6 +1,5 @@
 <?php
 include 'dashboardConnect.php';
-session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['affiliate_user_id'])) {
