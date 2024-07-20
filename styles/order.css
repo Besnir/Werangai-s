@@ -38,14 +38,14 @@ body {
 }
 
 .orderDetailsContainer .orderDetails table tr th, .orderDetailsContainer .orderDetails table tr td {
-  border: 1px solid #898888;
+  border: clamp(1px, .1vw, .1vw) solid #898888;
   padding-left: 1vw;
   font-size: 1.2vw;
 }
 
 .orderDetailsContainer .orderDetails .imgDiv {
   padding: 1.2vw .7vw;
-  border: 1px solid #898888;
+  border: clamp(1px, .1vw, .1vw) solid #898888;
   margin-left: -1px;
   text-align: center;
 }

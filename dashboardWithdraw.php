@@ -1,3 +1,15 @@
+<?php
+include 'dashboardConnect.php';
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['affiliate_user_id'])) {
+    // If not, redirect to the login page
+    header("Location: affiliateLogin.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -186,7 +198,7 @@
               </div>
             </div>
 
-            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved.</p>
+            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
           </footer>
         </div>
       </main>

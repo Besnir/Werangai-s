@@ -207,7 +207,7 @@ include 'dashboardConnect.php';
           <div class="emailBox">
             <p>Leave your Email to recieve our Newsletter.</p>
             <div class="newsletterEmail">
-              <input class="email-input" type="email" placeholder="Type your email here">
+              <input class="email-input" type="email" placeholder="Enter your email">
               <input type="submit" value="Submit">
             </div>
           </div>
@@ -237,7 +237,7 @@ include 'dashboardConnect.php';
               </div>
             </div>
 
-            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved.</p>
+            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
           </footer>
         </div>
       </main>

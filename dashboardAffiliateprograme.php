@@ -1,5 +1,13 @@
-<?php 
+<?php
 include 'dashboardConnect.php';
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['affiliate_user_id'])) {
+    // If not, redirect to the login page
+    header("Location: affiliateLogin.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -151,14 +159,14 @@ include 'dashboardConnect.php';
           <i class="fa-solid fa-people-group"></i>
         </div>
 
-        <h1> Welcome Back: <span>blessedemmanuel254</span></h1>
+        <h1> Welcome Back: <span><?php echo $affUsername; ?></span></h1>
 
         <div class="affiliate-layout">
           <div class="card">
             <div class="affidesc">
               <h3>DIRECT&nbsp;REFERRALS</h3>
               <p>Your team</p>
-              <h2>56</h2>
+              <h2>0</h2>
             </div>
 
             <i class="fa-solid fa-people-group fa-2x"></i>
@@ -168,7 +176,7 @@ include 'dashboardConnect.php';
             <div class="affidesc">
               <h3>BALANCE</h3>
               <p>Available balance</p>
-              <h2>KSH&nbsp;20,000</h2>
+              <h2>KSH. 0</h2>
             </div>
 
             <i class="fa-solid fa-money-check-dollar fa-2x"></i>
@@ -178,7 +186,7 @@ include 'dashboardConnect.php';
             <div class="affidesc">
               <h3>WITHDRAWN</h3>
               <p>Money out</p>
-              <h2>KSH&nbsp;13,000</h2>
+              <h2>KSH. 0</h2>
             </div>
 
             <i class="fa-regular fa-money-bill-1 fa-2x"></i>
@@ -188,7 +196,7 @@ include 'dashboardConnect.php';
             <div class="affidesc">
               <h3>PROCESSING</h3>
               <p>Pending request...</p>
-              <h2>KSH&nbsp;2,000</h2>
+              <h2>KSH. 0</h2>
             </div>
 
             <i class="fa-solid fa-recycle fa-2x"></i>
@@ -198,7 +206,7 @@ include 'dashboardConnect.php';
             <div class="affidesc">
               <h3>BONUS</h3>
               <p>Bonus</p>
-              <h2>KSH&nbsp;1,000</h2>
+              <h2>KSH. 0</h2>
             </div>
 
             <i class="fa-solid fa-gift fa-2x"></i>
@@ -220,7 +228,7 @@ include 'dashboardConnect.php';
           <div class="emailBox">
             <p>Leave your Email to recieve our Newsletter.</p>
             <div class="newsletterEmail">
-              <input class="email-input" type="email" placeholder="Type your email here">
+              <input class="email-input" type="email" placeholder="Enter your email">
               <input type="submit" value="Submit">
             </div>
           </div>
@@ -249,7 +257,7 @@ include 'dashboardConnect.php';
               </div>
             </div>
 
-            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved.</p>
+            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
           </footer>
         </div>
       </main>

@@ -34,18 +34,18 @@
 }
 
 .affiliate-layout .card h3 {
-  font-size: 12px;
+  font-size: clamp(12px, 1.1vw, 1.1vw);
   margin-bottom: 20px;
 }
 
 .affiliate-layout .card p {
   margin-bottom: 20px;
   color: black;
-  font-size: 14px;
+  font-size: clamp(14px, 1.25vw, 1.25vw);
 }
 
 .affiliate-layout .card h2 {
-  font-size: 18px;
+  font-size: clamp(18px, 1.5vw, 1.5vw);
 }
 
 .card:first-child {
@@ -78,20 +78,20 @@
 
 .loweraffiliate h4 {
   color: #065577;
-  font-size: 16px;
+  font-size: clamp(16px, 1.4vw, 1.4vw);
 }
 
 .loweraffiliate .loweraffiliateLink {
-  font-size: 16px;
+  font-size: clamp(16px, 1.4vw, 1.4vw);
   background: #dedede;
-  border: 1px solid #dedede78;
+  border: clamp(1px, .1vw, .1vw) solid #dedede78;
   padding: 5px;
   min-width: fit-content;
   border-radius: 5px;
 }
 
 .loweraffiliate h3 {
-  font-size: 14px;
+  font-size: clamp(14px, 1.25vw, 1.25vw);
   max-width: 590px;
   text-align: center;
   margin: 10px;
@@ -110,7 +110,7 @@
   padding: 8px;
   background: #065577;
   border: none;
-  font-size: 15px;
+  font-size: clamp(15px, 1.3vw, 1.3vw);
   cursor: pointer;
   display: inline;
   border-radius: 2px;
@@ -129,7 +129,7 @@
   background: green;
   padding: 8px 20px;
   border: none;
-  font-size: 15px;
+  font-size: clamp(15px, 1.3vw, 1.3vw);
   border-radius: .2vw;
   color: white;
 }

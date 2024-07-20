@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->num_rows == 1 && password_verify($password, $finalPassword)) {
         // Start a session and store user information
         session_start();
-        $_SESSION['user_id'] = $id;
+        $_SESSION['main_user_id'] = $id;
         $_SESSION['username'] = $username;
         header("Location: Dashboard.php");
         exit();
@@ -178,7 +178,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <li><a href="faqs.php">Faqs</a></li>
             <li><a href="contact-us.php">Contact&nbsp;Us</a></li>
         </ul>
-        <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved.</p>
+        <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
     </footer>
     <script src="scripts/styles.js"></script>
 </body>

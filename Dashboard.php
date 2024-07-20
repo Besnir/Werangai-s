@@ -147,7 +147,7 @@ include 'dashboardConnect.php';
               
           <div class="dashBrivian">
             <div class="accounth3AndDetails">
-              <h3>Hi <?php echo $username; ?>, it's nice seeing you! Welcome to Dash! Explore powerful tools for trading insights and financial data analysis.</h3>
+              <h3>Hi <?php echo $firstName;?> <?php echo $lastName; ?>, <br>It's nice seeing you! Welcome to Dash! Explore powerful tools for trading insights and financial data analysis.</h3>
               <div class="accountStatusDiv">
                 <div class="head">
                   <h2>Account Details</h2>
@@ -177,13 +177,13 @@ include 'dashboardConnect.php';
                 </div>
                 <div class="body">
                   <p>Registration date</p>
-                  <p><?php echo $registrationdate; ?></p>
+                  <p><?php echo $formattedDate; ?></p>
                 </div>
               </div>
 
-              <h1> Happy exploring and successful trading ahead!</h1>
+              <h1> Blessed Emmanuel wishes you a happy exploring and successful trading ahead!</h1>
             </div>
-
+            
             <div class="accountAnalytics">
               <h1>Analytics</h1>
               <div class="analyticsChild">
@@ -228,7 +228,7 @@ include 'dashboardConnect.php';
           <div class="emailBox">
             <p>Leave your Email to receive our Newsletter.</p>
             <div class="newsletterEmail">
-              <input class="email-input" type="email" placeholder="Type your email here">
+              <input class="email-input" type="email" placeholder="Enter your email">
               <input type="submit" value="Submit">
             </div>
           </div>
@@ -257,7 +257,7 @@ include 'dashboardConnect.php';
               </div>
             </div>
 
-            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved.</p>
+            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
           </footer>
         </div>
       </main>

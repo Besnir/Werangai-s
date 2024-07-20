@@ -11,7 +11,7 @@ body {
   display: flex;
   width: 70%;
   margin: 0 auto;
-  border: 1px solid #dedede;
+  border: clamp(1px, .1vw, .1vw) solid #dedede;
   border-radius: 12px;
   margin-bottom: 50px;
   overflow: hidden;
@@ -27,7 +27,7 @@ body {
 }
 
 .payContainer hr {
-  border: 1px solid #dedede;
+  border: clamp(1px, .1vw, .1vw) solid #dedede;
   margin: 0 15px;
 }
 
@@ -38,7 +38,7 @@ body {
 .methods div {
   padding: 7px 20px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: clamp(15px, 1.3vw, 1.3vw);
 }
 
 .methods div.active {
@@ -64,7 +64,7 @@ body {
 
 .payContainer .fa-solid {
   margin-right: 10px;
-  font-size: 20px;
+  font-size: clamp(20px, 1.6vw, 1.6vw);
   color: #898888;
 }
 
@@ -96,7 +96,7 @@ body {
 
 .payContainer .katikati .card-details .c-number {
   width: 100%;
-  border: 1px solid #898888;
+  border: clamp(1px, .1vw, .1vw) solid #898888;
   border-radius: 3px;
   padding: 0 12px;
   margin-top: 10px;
@@ -124,7 +124,7 @@ body {
 }
 
 .payContainer .katikati .card-details .cc-exp {
-  border: 1px solid #898888;
+  border: clamp(1px, .1vw, .1vw) solid #898888;
   border-radius: 3px;
   height: 50px;
   margin-top: 10px;
@@ -133,7 +133,7 @@ body {
 }
 
 .card-details .cvv-box {
-  border: 1px solid #898888;
+  border: clamp(1px, .1vw, .1vw) solid #898888;
   margin-top: 10px;
   padding: 12px;
   height: 50px;
@@ -149,7 +149,7 @@ body {
 
 .card-details .email input {
   width: 100%;
-  border: 1px solid #898888;
+  border: clamp(1px, .1vw, .1vw) solid #898888;
   border-radius: 3px;
   padding: 12px;
   height: 50px;
@@ -193,7 +193,7 @@ button {
   border: none;
   height: 40px;
   margin-top: 30px;
-  font-size: 18px;
+  font-size: clamp(18px, 1.5vw, 1.5vw);
   color: white;
   background: #065577;
 }

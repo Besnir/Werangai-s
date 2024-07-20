@@ -206,7 +206,7 @@
       <li><a class="active" href="#">Contact&nbsp;Us</a></li>
     </ul>
 
-    <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved.</p>
+    <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
   </footer>
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>

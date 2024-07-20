@@ -69,7 +69,7 @@ body {
   width: 260px;
   height: 100vh;
   padding: 20px;
-  font-size: 15px;
+  font-size: clamp(15px, 1.3vw, 1.3vw);
   color: #898888;
   position: fixed;
   top: 0;
@@ -88,7 +88,7 @@ main .cartHead {
   gap: 60px;
   position: relative;
   color: #065577;
-  font-size: 10px;
+  font-size: clamp(10px, 1vw, 1vw);
   padding-bottom: 40px;
   width: 100%;
 }
@@ -133,7 +133,7 @@ main #cartItem .cartItemMainItem .cartDescPrice {
 }
 
 main #cartItem .cartItemMainItem span {
-  font-size: 12px;
+  font-size: clamp(12px, 1.1vw, 1.1vw);
   color: #898888;
   border-bottom: 1px solid #8988884d;
   padding-bottom: 5px;
@@ -145,7 +145,7 @@ main #cartItem .cartItemMainItem p {
 }
 
 main #cartItem .cartItemMainItem .fa-trash {
-  font-size: 18px;
+  font-size: clamp(18px, 1.5vw, 1.5vw);
   color: #065577;
   cursor: pointer;
 
@@ -176,7 +176,7 @@ main .foot {
   text-decoration: none;
   color: 
   white;
-  font-size: 14px;
+  font-size: clamp(14px, 1.25vw, 1.25vw);
   background: #ff0f0fc7;
   padding: 6px;
 }
@@ -195,49 +195,49 @@ main a:hover {
 .emailBox {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 
-  padding: 1.3vw 0 1.6vw 0;
-  gap: 1.6vw;
-  background: #065577;
-  width: 98%;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  padding: clamp(15px, 1.3vw, 1.3vw) 0 clamp(20px, 1.6vw, 1.6vw) 0;
+  gap: clamp(20px, 1.6, 1.6vw);
+  background: #0e020f;
+  width: 100%;
+  margin-bottom: clamp(20px, 1.6, 1.6vw);
   overflow: hidden;
 }
 
 .emailBox p {
   color: white;
-  font-size: 1.6vw;
+  font-size: clamp(20px, 1.6vw, 1.6vw);
   font-weight: 600;
-  padding: 0 8px;
+  padding: 0 clamp(8px, .6vw, .6vw);
   text-align: center;
 }
 
 .emailBox input {
-  padding: 1vw;
-  font-size: 1.4vw;
+  padding: clamp(10px, 1vw, 1vw);
+  font-size: clamp(16px, 1.4vw, 1.4vw);
   outline: none;
-  max-width: 50vw;
+  margin-top: clamp(10px, 1vw, 1vw);
 }
 
 .emailBox .email-input {
   width: 100%;
-  min-width: 192px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: clamp(8px, .6vw, .6vw);
+  border-bottom-left-radius: clamp(8px, .6vw, .6vw);
   border: none;
   background: white;
+  width: clamp(192px, 50vw,50vw);
 }
 
 .emailBox input[type="submit"] {
   color: white;
   background: #ff8c00;
   border: none;
-  margin-left: -1px;
+  margin-left: clamp(-1px, -.1vw, -.1vw);
   cursor: pointer;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-right-radius: clamp(8px, .6vw, .6vw);
+  border-bottom-right-radius: clamp(8px, .6vw, .6vw);
 }
 
 .emailBox input[type="submit"]:hover {
@@ -249,5 +249,5 @@ main a:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 clamp(10px, 1vw, 1vw);
 }

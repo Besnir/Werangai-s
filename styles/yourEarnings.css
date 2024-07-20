@@ -16,7 +16,7 @@ main.table1 {
   border-radius: 1rem;
   box-shadow: 0 15px 10px rgba(0, 0, 0, 0.26);
   overflow: hidden;
-  font-size: 14px;
+  font-size: clamp(14px, 1.25vw, 1.25vw);
 }
 
 .tableHeader {
@@ -26,13 +26,13 @@ main.table1 {
   text-align: left;
   background: #065577;
   color: white;
-  font-size: 12px;
+  font-size: clamp(12px, 1.1vw, 1.1vw);
 }
 
 .tableHeader .main--title {
   font-weight: normal;
   text-align: left;
-  font-size: 18px;
+  font-size: clamp(18px, 1.5vw, 1.5vw);
 }
 
 .tableHeader.level2 {
@@ -42,7 +42,7 @@ main.table1 {
   text-align: left;
   background: #ff8c06;
   color: white;
-  font-size: 12px;
+  font-size: clamp(12px, 1.1vw, 1.1vw);
 }
 
 .tableHeader.level3 {
@@ -52,7 +52,7 @@ main.table1 {
   text-align: left;
   background: green;
   color: white;
-  font-size: 12px;
+  font-size: clamp(12px, 1.1vw, 1.1vw);
 }
 
 .tableBody {
