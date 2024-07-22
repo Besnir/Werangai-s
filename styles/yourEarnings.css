@@ -59,7 +59,7 @@ main.table1 {
   width: 99%;
   max-height: 89%;
   background: #89888829;
-  margin: 5px auto;
+  margin: clamp(5px, .35vw, .35vw) auto;
   border-radius: 10px;
   overflow: auto;
 }

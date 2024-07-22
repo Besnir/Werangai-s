@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding: 20px 10px;
+  padding: clamp(20px, 1.6vw, 1.6vw) 10px;
   margin-bottom: 50px;
 }
 
@@ -56,13 +56,13 @@
   background: white;
   padding: 15px;
   border: clamp(1px, .1vw, .1vw) solid #898888;
-  border-radius: 25px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.26);
-  margin-bottom: 20px;
+  border-radius: clamp(25px, 1.9vw, 1.9vw);
+  box-shadow: 0 clamp(15px, 1.3vw, 1.3vw) clamp(35px, 2.3vw, 2.3vw) rgba(0, 0, 0, 0.26);
+  margin-bottom: clamp(20px, 1.6vw, 1.6vw);
 }
 
 .sign-up .error-message {
-  margin-top: 10px;
+  margin-top: clamp(10px, 1vw, 1vw);
   color: red; 
   font-size: clamp(16px, 1.4vw, 1.4vw);
   border: clamp(1px, .1vw, .1vw) solid #898888;
@@ -82,7 +82,7 @@
 
 .sign-up h4 {
   text-align: center;
-  margin-top: 10px;
+  margin-top: clamp(10px, 1vw, 1vw);
   font-size: clamp(14px, 1.25vw, 1.25vw);
   color: #898888;
   font-weight: normal;
@@ -95,7 +95,7 @@ form {
 
 form .inp-box {
   position: relative;
-  margin-top: 10px;
+  margin-top: clamp(10px, 1vw, 1vw);
 }
 
 .toggle-password {
@@ -120,7 +120,7 @@ form input, form .inp-box #countrySelect {
   padding: 6px 0;
   font-size: clamp(16px, 1.4vw, 1.4vw);
   min-width: 60px;
-  margin: 5px 0;
+  margin: clamp(5px, .35vw, .35vw) 0;
   border: none;
   border-bottom: 1px solid #24262b;
   border-right: 1px solid #24262b;
@@ -159,7 +159,7 @@ form .submit-btn {
   background: #065577;
   color: white;
   cursor: pointer;
-  padding: 9px;
+  padding: clamp(9px, .8vw, .8vw);
   font-size: clamp(15px, 1.3vw, 1.3vw);
   border: none;
   border-radius: 18px;
@@ -174,7 +174,7 @@ form .submit-btn:hover {
 
 form p {
   font-size: clamp(14px, 1.25vw, 1.25vw);
-  margin-top: 10px;
+  margin-top: clamp(10px, 1vw, 1vw);
   font-weight: 600;
 }
 
@@ -194,7 +194,7 @@ form a {
 
 .signupDescription {
   display: flex;
-  gap: 20px;
+  gap: clamp(20px, 1.6vw, 1.6vw);
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -206,7 +206,7 @@ form a {
 
 .loginDescription {
   display: flex;
-  gap: 20px;
+  gap: clamp(20px, 1.6vw, 1.6vw);
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -264,7 +264,7 @@ form a {
 @media (max-width: 640px) {
   .sing-up-bar {
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: clamp(25px, 1.9vw, 1.9vw);
   }
 
   .signupWelcome .welcomeMessg {

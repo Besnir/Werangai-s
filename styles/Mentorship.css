@@ -9,18 +9,18 @@
 }
 
 .video-grid h1 {
-  font-size: 23px;
-  padding: 0 10px;
+  font-size: clamp(23px, 1.7vw, 1.7vw);
+  padding: 0 clamp(10px, 1vw, 1vw);
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: clamp(10px, 1vw, 1vw);
+  margin-bottom: clamp(10px, 1vw, 1vw);
   color: #ff8c00;
 }
 
 .video-grid .vgHeader p {
   color: #898888;
   text-align: center;
-  padding: 0 10px;
+  padding: 0 clamp(10px, 1vw, 1vw);
 }
 
 .video-grid .tProfile {
@@ -28,7 +28,7 @@
   margin: 0 auto;
   flex-direction: column;
   gap: 8px;
-  padding: 0 20px;
+  padding: 0 clamp(20px, 1.6vw, 1.6vw);
   width: fit-content;
 }
 
@@ -40,7 +40,7 @@
 
 .video-grid .tProfile .details {
   display: flex;
-  gap: 20px;
+  gap: clamp(20px, 1.6vw, 1.6vw);
   align-items: center;
 }
 
@@ -53,7 +53,7 @@
 
 .video-grid .tProfile .details .namesDiv {
   display: flex;
-  gap: 10px;
+  gap: clamp(10px, 1vw, 1vw);
   flex-direction: column;
 }
 
@@ -75,14 +75,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: clamp(50px, 3.6vw, 3.6vw);
   width: 100%;
 }
 
 .main-video-grid .video-and-titles {
   display: flex;
   flex-direction: column; /* Stack items vertically by default */
-  gap: 20px; /* Adjusted gap */
+  gap: clamp(20px, 1.6vw, 1.6vw); /* Adjusted gap */
   justify-content: center;
   width: 100%;
 }
@@ -139,7 +139,7 @@
 .main-video-grid p {
   max-width: 100%; /* Adjusted max-width */
   font-size: 19px;
-  padding: 0 10px;
+  padding: 0 clamp(10px, 1vw, 1vw);
 }
 
 .main-video-grid .video-and-titles .progressCircle {
@@ -152,8 +152,8 @@
 
   color: #ff8c00;
   border: clamp(1px, .1vw, .1vw) solid #898888;
-  padding: 20px 0;
-  border-radius: 25px;
+  padding: clamp(20px, 1.6vw, 1.6vw) 0;
+  border-radius: clamp(25px, 1.9vw, 1.9vw);
   background: white;
   box-shadow: 0 9px 10px rgba(0, 0, 0, 0.26);
 }

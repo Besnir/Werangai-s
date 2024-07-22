@@ -93,7 +93,7 @@ nav ul .icon1 {
   height:100%;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: clamp(10px, 1vw, 1vw);
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -297,7 +297,7 @@ nav ul .icon1 {
     right: 0;
     flex-direction: column;
     width: 275px;
-    padding: 20px 35px 35px 20px;
+    padding: clamp(20px, 1.6vw, 1.6vw) 35px 35px 20px;
     overflow-y: auto;
     background: #065577;
     height: 100vh;
@@ -341,13 +341,13 @@ nav ul .icon1 {
   }
 
   .dashboard-details {
-    gap: 20px;
+    gap: clamp(20px, 1.6vw, 1.6vw);
   }
 
   .dashboard-details .signup,
   .dashboard-details .login {
     padding: 8px 0;
-    border-radius: 12px;
+    border-radius: clamp(12px, 1.1vw, 1.1vw);
   
     width: 130px;
     transition: transform .5s ease;
@@ -365,7 +365,7 @@ nav ul .icon1 {
 @media (max-width: 720px) {
   .nav-bar {
     padding: 0 12px;
-    gap: 20px;
+    gap: clamp(20px, 1.6vw, 1.6vw);
     min-width: none;
   }
 

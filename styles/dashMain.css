@@ -12,14 +12,14 @@
   text-align: center;
   color: #065577;
   font-size: 19px;
-  padding: 0 20px;
+  padding: 0 clamp(20px, 1.6vw, 1.6vw);
 }
 
 .affiliate-layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  padding: 20px;
-  gap: 20px;
+  padding: clamp(20px, 1.6vw, 1.6vw);
+  gap: clamp(20px, 1.6vw, 1.6vw);
 }
 
 .affiliate-layout .card {
@@ -35,11 +35,11 @@
 
 .affiliate-layout .card h3 {
   font-size: clamp(12px, 1.1vw, 1.1vw);
-  margin-bottom: 20px;
+  margin-bottom: clamp(20px, 1.6vw, 1.6vw);
 }
 
 .affiliate-layout .card p {
-  margin-bottom: 20px;
+  margin-bottom: clamp(20px, 1.6vw, 1.6vw);
   color: black;
   font-size: clamp(14px, 1.25vw, 1.25vw);
 }
@@ -73,7 +73,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: clamp(20px, 1.6vw, 1.6vw);
 }
 
 .loweraffiliate h4 {

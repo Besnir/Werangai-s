@@ -3,7 +3,7 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 20px;
+  gap: clamp(20px, 1.6vw, 1.6vw);
 
   padding-bottom: 50px;
 }
@@ -25,7 +25,7 @@ section h1 span {
 .calculatorLayout {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: clamp(25px, 1.9vw, 1.9vw);
   width: 100%;
   max-width: 450px;
 }
@@ -38,7 +38,7 @@ section h1 span {
 
 .calculatorDesc h1 {
   font-size: clamp(24px, 1.8vw, 1.8vw);
-  padding: 0 20px;
+  padding: 0 clamp(20px, 1.6vw, 1.6vw);
   text-align: left;
   width: 100%;
   color: #065577;
@@ -51,7 +51,7 @@ section h1 span {
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 0 10px;
+  padding: 0 clamp(10px, 1vw, 1vw);
 }
 
 .calculator {
@@ -227,7 +227,7 @@ section h1 span {
   display: flex;
   flex-direction: column;
   text-align: left;
-  gap: 10px;
+  gap: clamp(10px, 1vw, 1vw);
   color: black;
   font-size: clamp(15px, 1.3vw, 1.3vw);
 }
@@ -266,7 +266,7 @@ section h1 span {
 .content .requiredInputs {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: clamp(10px, 1vw, 1vw);
 }
 
 .content .requiredInputs .theInput {
@@ -429,7 +429,7 @@ section h1 span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: clamp(20px, 1.6vw, 1.6vw);
   padding: 5px 10px 10px 10px;
 }
 
@@ -437,7 +437,7 @@ section h1 span {
   background: #ff8c00;
   cursor: pointer;
   border-radius: 1rem;
-  padding: 9px;
+  padding: clamp(9px, .8vw, .8vw);
   width: 50%;
 }
 

@@ -6,7 +6,7 @@
 
 body {
   font-family: Roboto, Arial;
-  padding-top: 12vh;
+  padding-top: clamp(80px, 14vh, 14vh);
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -46,9 +46,9 @@ body {
 
 .loader::after {
   content: "";
-  width: 40px;
-  height: 40px;
-  border: 3px solid #065577bc;
+  width: clamp(40px, 3.2vw, 3.2vw);
+  height: clamp(40px, 3.2vw, 3.2vw);
+  border: clamp(3px, .25vw, .25vw) solid #065577bc;
   border-top-color: #ff8c00;
   border-right-color: #ff8c00;
   border-bottom-color: #ff8c00;
@@ -68,7 +68,7 @@ body {
 
   width: 260px;
   height: 100vh;
-  padding: 20px;
+  padding: clamp(20px, 1.6vw, 1.6vw);
   font-size: clamp(15px, 1.3vw, 1.3vw);
   color: #898888;
   position: fixed;
@@ -108,9 +108,9 @@ main #cartItem {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(20px, 1.6vw, 1.6vw);
 
-  margin-bottom: 20px;
+  margin-bottom: clamp(20px, 1.6vw, 1.6vw);
 }
 
 main #cartItem .cartItemMainItem {
@@ -161,7 +161,7 @@ main #cartItem .cartItemMainItem .fa-trash:hover {
 }
 
 main .foot {
-  margin-bottom: 20px;
+  margin-bottom: clamp(20px, 1.6vw, 1.6vw);
   border-top: 1px solid ;
   padding-top: 5px;
   font-size: 17px;
