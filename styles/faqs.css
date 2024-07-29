@@ -7,7 +7,7 @@
   gap: clamp(25px, 1.9vw, 1.9vw);
 
   width: 100%;
-  padding: clamp(10px, 1vw, 1vw) 0 clamp(45px, 43vw, 43vw) 0;
+  padding: clamp(10px, 1vw, 1vw) 0 clamp(45px, 4.3vw, 4.3vw) 0;
 }
 
 .main .faqsheader {

@@ -15,12 +15,13 @@ function closeSidebar() {
   }
 }
 
-
 //Copy and Share affiliate link
 
 function copyLink() {
   const link = document.querySelector('.loweraffiliateLink').innerText;
+  const linkbtnText = document.getElementById('linkbtn').innerHTML;
   navigator.clipboard.writeText(link).then(() => {
+    linkbtnText = 'Copied'
       alert('Link copied to clipboard!');
   }).catch(err => {
       console.error('Error copying link: ', err);

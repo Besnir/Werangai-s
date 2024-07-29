@@ -124,7 +124,7 @@
               <p>&check;&nbsp;Beginner and advanced live classes included</p>
             </div>
             <h1>$40</h1>
-            <a href="#" class="enroll-button">Enroll&nbsp;now</a>
+            <a href="thankyouConstructionPage.php" class="enroll-button">Enroll&nbsp;now</a>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@
               <p>&check;&nbsp;Beginner and advanced live classes included</p>
             </div>
             <h1>$71</h1>
-            <a href="#" class="enroll-button">Enroll&nbsp;now</a>
+            <a href="thankyouConstructionPage.php" class="enroll-button">Enroll&nbsp;now</a>
           </div>
         </div>
       </div>
@@ -179,7 +179,7 @@
               <p>&check;&nbsp;Beginner and advanced live classes included</p>
             </div>
             <h1>$148</h1>
-            <a href="#" class="enroll-button">Enroll&nbsp;now</a>
+            <a href="thankyouConstructionPage.php" class="enroll-button">Enroll&nbsp;now</a>
           </div>
         </div>
       </div>
@@ -206,7 +206,7 @@
               <p>&check;&nbsp;Beginner and advanced live classes included</p>
             </div>
             <h1>$254</h1>
-            <a href="#" class="enroll-button">Enroll&nbsp;now</a>
+            <a href="thankyouConstructionPage.php" class="enroll-button">Enroll&nbsp;now</a>
           </div>
         </div>
       </div>
@@ -253,7 +253,7 @@
       <li><a href="contact-us.php">Contact&nbsp;Us</a></li>
     </ul>
 
-    <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
+    <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel's Developers</a>.</p>
   </footer>
 
   <script src="scripts/styles.js"></script>

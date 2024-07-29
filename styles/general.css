@@ -66,7 +66,7 @@ body {
   text-align: center;
   background: black;
 
-  width: 260px;
+  width: clamp(260px, 20vw, 20vw);
   height: 100vh;
   padding: clamp(20px, 1.6vw, 1.6vw);
   font-size: clamp(15px, 1.3vw, 1.3vw);
@@ -85,11 +85,11 @@ body {
 
 main .cartHead {
   display: flex;
-  gap: 60px;
+  gap: clamp(60px, 4vw, 4vw);
   position: relative;
   color: #065577;
   font-size: clamp(10px, 1vw, 1vw);
-  padding-bottom: 40px;
+  padding-bottom: clamp(40px, );
   width: 100%;
 }
 
@@ -99,7 +99,7 @@ main .cartHead .material-icons-outlined {
 }
 
 main .js-itemsP {
-  margin-bottom: 30px;
+  margin-bottom: clamp(30px, 2vw, 2vw);
 }
 
 main #cartItem {
@@ -121,7 +121,7 @@ main #cartItem .cartItemMainItem {
 }
 
 main #cartItem .cartItemMainItem img {
-  width: 40px;
+  width: clamp(40px, 3.2vw, 3.2vw);
 }
 
 main #cartItem .cartItemMainItem .cartDescPrice {
@@ -135,12 +135,12 @@ main #cartItem .cartItemMainItem .cartDescPrice {
 main #cartItem .cartItemMainItem span {
   font-size: clamp(12px, 1.1vw, 1.1vw);
   color: #898888;
-  border-bottom: 1px solid #8988884d;
-  padding-bottom: 5px;
+  border-bottom: clamp(1px, .08vw, .08vw) solid #8988884d;
+  padding-bottom: clamp(5px, .35vw, .35vw);
 }
 
 main #cartItem .cartItemMainItem p {
-  font-size: 17px;
+  font-size: clamp(17px, 1.5vw, 1.5vw);
   font-weight: 600;
 }
 
@@ -149,22 +149,22 @@ main #cartItem .cartItemMainItem .fa-trash {
   color: #065577;
   cursor: pointer;
 
-  padding: 8px 10px;
+  padding: clamp(8px, .7vw, .7vw) clamp(10px, 1vw, 1vw);
   border-radius: 50%;
 }
 
 main #cartItem .cartItemMainItem .fa-trash:hover {
   color: #ff0f0fc7;
   background: #89888825;
-  padding: 8px 10px;
+  padding: clamp(8px, .7vw, .7vw) clamp(10px, 1vw, 1vw);
   border-radius: 50%;
 }
 
 main .foot {
   margin-bottom: clamp(20px, 1.6vw, 1.6vw);
-  border-top: 1px solid ;
-  padding-top: 5px;
-  font-size: 17px;
+  border-top: clamp(1px, .08vw, .08vw) solid ;
+  padding-top: clamp(5px, .4vw, .4vw);
+  font-size: clamp(17px, 1.5vw, 1.5vw);
   color: white;
   width: 100%;
   
@@ -178,7 +178,7 @@ main .foot {
   white;
   font-size: clamp(14px, 1.25vw, 1.25vw);
   background: #ff0f0fc7;
-  padding: 6px;
+  padding: clamp(6px, .47vw, .47vw);
 }
 
 main a:hover {

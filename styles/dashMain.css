@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 30px;
+  gap: clamp(30px, 2vw, 2vw);
   width: 100%;
   text-align: center;
 }
@@ -11,7 +11,7 @@
 .main-container h1 {
   text-align: center;
   color: #065577;
-  font-size: 19px;
+  font-size: clamp(19px, 1.55vw, 1.55vw);
   padding: 0 clamp(20px, 1.6vw, 1.6vw);
 }
 
@@ -26,15 +26,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
+  padding: clamp(25px, 1.9vw, 1.9vw);
   color: white;
-  border-radius: 10px;
+  border-radius: clamp(14px, 1.2vw, 1.2vw);
   text-align: left;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 clamp(10px, 1vw, 1vw) clamp(20px, 1.6vw, 1.6vw) rgba(0, 0, 0, 0.26);
 }
 
 .affiliate-layout .card h3 {
-  font-size: clamp(12px, 1.1vw, 1.1vw);
+  font-size: clamp(14px, 1.2vw, 1.2vw);
   margin-bottom: clamp(20px, 1.6vw, 1.6vw);
 }
 
@@ -49,19 +49,19 @@
 }
 
 .card:first-child {
-  background: #065577;
+  background: #024864;
 }
 
 .card:nth-child(2) {
-  background: #ff8c00;
+  background: #0f610f;
 }
 
 .card:nth-child(3) {
-  background: rgb(15, 97, 15);
+  background: #b36403;
 }
 
 .card:nth-child(4) {
-  background: red;
+  background: #7a0b0b;
 }
 
 .card:nth-child(5) {
@@ -85,35 +85,35 @@
   font-size: clamp(16px, 1.4vw, 1.4vw);
   background: #dedede;
   border: clamp(1px, .1vw, .1vw) solid #dedede78;
-  padding: 5px;
+  padding: clamp(5px, .35vw, .35vw);
   min-width: fit-content;
-  border-radius: 5px;
+  border-radius: clamp(5px, .35vw, .35vw);
 }
 
 .loweraffiliate h3 {
   font-size: clamp(14px, 1.25vw, 1.25vw);
-  max-width: 590px;
+  max-width: clamp(590px, 60vw, 60vw);
   text-align: center;
-  margin: 10px;
+  margin: clamp(10px, 1vw, 1vw);
   color: #898888;
   font-weight: normal;
 }
 
 .linkbtn {
   display: flex;
-  gap: 30px;
+  gap: clamp(30px, 2vw, 2vw);
   width: fit-content;
 }
 
 .linkbtn button {
   color: white;
-  padding: 8px;
+  padding: clamp(8px, .7vw, .7vw);
   background: #065577;
   border: none;
   font-size: clamp(15px, 1.3vw, 1.3vw);
   cursor: pointer;
   display: inline;
-  border-radius: 2px;
+  border-radius: clamp(2px, .18vw, .18vw);
 }
 
 .linkbtn .sharebtn {
@@ -127,10 +127,10 @@
 .loweraffiliate .withDrawButton {
   text-decoration: none;
   background: green;
-  padding: 8px 20px;
+  padding: clamp(8px, .7vw, .7vw) clamp(20px, 1.6vw, 1.6vw);
   border: none;
   font-size: clamp(15px, 1.3vw, 1.3vw);
-  border-radius: .2vw;
+  border-radius: clamp(3px, .2vw, .2vw);
   color: white;
 }
 
@@ -153,17 +153,5 @@
 @media screen and (min-width: 951px) {
   .affiliate-layout {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media screen and (min-width: 1245px) {
-  .affiliate-layout {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-@media screen and (min-width: 1865px) {
-  .affiliate-layout {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }

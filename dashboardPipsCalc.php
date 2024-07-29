@@ -162,7 +162,7 @@ include 'dashboardConnect.php';
                     <option value="pips">Pips Calculator</option>
                     <option value="normal">Normal Calculator</option>
                   </select> 
-              </div>
+                </div>
         
                 <div class="calculator" id="normalCalculator">
                   <div class="display">
@@ -332,6 +332,7 @@ include 'dashboardConnect.php';
                             <option value="ZARJPY">ZARJPY</option>
                           </select>
                         </div>
+                        
                         <div class="categoryDisplay asset">
                           <Label>Commodity :</Label>
                           <select name="" id="asset">
@@ -346,52 +347,59 @@ include 'dashboardConnect.php';
                             <option value="XAGEUR">XAGEUR</option>
                             <option value="XTDUSD">XTDUSD</option>
                             <option value="XPTUSD">XPTUSD</option>
+                            <option value="NAS100">NAS100</option>
+                            <option value="US30">US30</option>
+                            <option value="US30">GER30</option>
                           </select>
                         </div>
                         
                         <div class="categoryDisplay index--basket">
                           <Label>Index/basket :</Label>
                           <select name="" id="indexOrBasket">
-                            <option value="Volatility 10">Volatility 10</option>
-                            <option value="" selected>Volatility 10 1s</option>
-                            <option value="">Volatility 25</option>
-                            <option value="">Volatility 25 1s</option>
-                            <option value="">Volatility 50</option>
-                            <option value="">Volatility 50 1s</option>
-                            <option value="">Volatility 75</option>
-                            <option value="">Volatility 75 1s</option>
-                            <option value="">Volatility 100</option>
-                            <option value="">Volatility 100 1s</option>
-                            <option value="">Volatility 150 1s</option>
-                            <option value="">Volatility 250 1s</option>
-                            <option value="">BEAR MARKET INDEX</option>
-                            <option value="">BULL MARKET INDEX</option>
-                            <option value="">AUD basket</option>
-                            <option value="">EUR basket</option>
-                            <option value="">GBP basket</option>
-                            <option value="">USD basket</option>
-                            <option value="">Gold basket</option>
-                            <option value="">Boom 300 Index</option>
-                            <option value="">Boom 500 Index</option>
-                            <option value="">Boom 1000 Index</option>
-                            <option value="">Crash 300 Index</option>
-                            <option value="">Crash 500 Index</option>
-                            <option value="">Crash 1000 Index</option>
-                            <option value="">Jump 10 Index</option>
-                            <option value="">Jump 25 Index</option>
-                            <option value="">Jump 50 Index</option>
-                            <option value="">Jump 75 Index</option>
-                            <option value="">Jump 100 Index</option>
+                            <option>Volatility 10</option>
+                            <option selected>Volatility 10 1s</option>
+                            <option>Volatility 25</option>
+                            <option>Volatility 25 1s</option>
+                            <option>Volatility 50</option>
+                            <option>Volatility 50 1s</option>
+                            <option>Volatility 75</option>
+                            <option>Volatility 75 1s</option>
+                            <option>Volatility 100</option>
+                            <option>Volatility 100 1s</option>
+                            <option>Volatility 150 1s</option>
+                            <option>Volatility 250 1s</option>
+                            <option>BEAR MARKET INDEX</option>
+                            <option>BULL MARKET INDEX</option>
+                            <option>AUD basket</option>
+                            <option>EUR basket</option>
+                            <option>GBP basket</option>
+                            <option>USD basket</option>
+                            <option>Gold basket</option>
+                            <option>Boom 300 Index</option>
+                            <option>Boom 500 Index</option>
+                            <option>Boom 1000 Index</option>
+                            <option>Crash 300 Index</option>
+                            <option>Crash 500 Index</option>
+                            <option>Crash 1000 Index</option>
+                            <option>Jump 10 Index</option>
+                            <option>Jump 25 Index</option>
+                            <option>Jump 50 Index</option>
+                            <option>Jump 75 Index</option>
+                            <option>Jump 100 Index</option>
                           </select>
                         </div>
                       </div>
         
-                      <div class="accountCurrency">
+                      <div id="account_currency" class="accountCurrency">
                         <Label>Account Currency :</Label>
-                        <select name="" id="">
+                        <select name="" id="accont_currency">
+                          <option value="AUD">AUD</option>
                           <option value="GBP">GBP</option>
                           <option value="EUR">EUR</option>
+                          <option value="CAD">CAD</option>
+                          <option value="CHF">CHF</option>
                           <option value="USD" selected>USD</option>
+                          <option value="NZD">NZD</option>
                           <option value="NGN">NGN</option>
                           <option value="ZAR">ZAR</option>
                           <option value="KES">KES</option>
@@ -492,10 +500,11 @@ include 'dashboardConnect.php';
                   </div>
                 </div>
               </div>
-            </div> 
+            </div>
+            
             <div class="calculatorDesc">
               <h1 class="calMessage">
-               Welcome to our two-in-one Pips and Standard Calculator! Our Pips Calculator helps you assess potential profit or loss on forex trades. Simply input your trade details to calculate pips and manage risk. The standard calculator is available for everyday calculations. This tool is essential for informed trading decisions. Remember to trade responsibly and consider your individual risk tolerance. Happy trading and calculating!
+              Welcome to our two-in-one Pips and Standard Calculator! Our Pips Calculator helps you assess potential profit or loss on forex trades. Simply input your trade details to calculate pips and manage risk. The standard calculator is available for everyday calculations. This tool is essential for informed trading decisions. Remember to trade responsibly and consider your individual risk tolerance. Happy trading and calculating!
               </h1>
             </div>
           </section>
@@ -524,7 +533,7 @@ include 'dashboardConnect.php';
               </div>
             </div>
 
-            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
+            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel's Developers</a>.</p>
           </footer>
         </div>
       </main>

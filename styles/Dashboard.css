@@ -24,28 +24,26 @@
 
 .grid-container header {
   grid-area: header;
-  height: 10vh;
-  min-height: 50px;
+  height: clamp(50px, 10vh, 10vh);
   background: #065577;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2vw;
-  box-shadow: 0 -1vh .5vh rgba(0, 0, 0, 0.9);
-  border-bottom: .515vh solid #898888;
+  padding: 0 clamp(12px, 2.5vw, 2.5vw);
+  box-shadow: 0 clamp(15px, 1.3vw, 1.3vw) clamp(35px, 2.3vw, 2.3vw) rgba(0, 0, 0, 0.26);
 }
 
 .grid-container header .material-icons-outlined {
-  font-size: 1.5vw;
+  font-size: clamp(18px, 1.5vw, 1.5vw);
   color: white;
 }
 
 .grid-container header .header-left {
-  padding: 0 1vw;
+  padding: 0 clamp(10px, 1vw, 1vw);
 }
 
 .grid-container header .affiliateName {
-  font-size: 1.5vw;
+  font-size: clamp(18px, 1.5vw, 1.5vw);
   color: white;
 }
 
@@ -57,17 +55,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5vw;
+  gap: clamp(18px, 1.5vw, 1.5vw);
   cursor: pointer;
   background: white;
   color: black;
-  font-size: 1.4vw;
-  width: 2.2vw;
+  font-size: clamp(16px, 1.4vw, 1.4vw);
+  width: clamp(30px, 2.2vw, 2.2vw);
   min-width: 35px;
-  height: 2.2vw;
+  height: clamp(30px, 2.2vw, 2.2vw);
   min-height: 35px;
-  border-radius: .4vw;
-  box-shadow: 0 -2px 6px rgba(48, 47, 47, 0.9);
+  border-radius: clamp(5px, .4vw, .4vw);
+  box-shadow: 0 clamp(-2px, -.18vw, -.18vw) clamp(6px, .5vw, .5vw) rgba(48, 47, 47, 0.9);
 }
 
 .header-right-cart {
@@ -110,7 +108,7 @@
 #sidebar {
   grid-area: sidebar;
   height: 100%;
-  width: 4vw;
+  width: clamp(60px, 4vw, 4vw);
   min-width: 60px;
   background-color: #ff8c00;
   overflow-y: scroll;
@@ -121,12 +119,11 @@
 
 #sidebar.chartsSidebar {
   display: none;
-  width: 18vw;
-  min-width: 230px;
+  width: clamp(230px, 18vw, 18vw);
 }
 
 #sidebar:hover {
-  width: 18vw;
+  width: clamp(230px, 18vw, 18vw);
 }
 
 #sidebar::-webkit-scrollbar {
@@ -143,8 +140,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2vw;
-  padding: .6vw 1.3vw 0 0;
+  gap: clamp(20px, 2vw, 2vw);
+  padding: clamp(7px, .6vw, .6vw) clamp(15px, 1.3vw, 1.3vw) 0 0;
 }
 
 .sidebar-title .material-icons-outlined {
@@ -158,10 +155,10 @@
 
 .sidebar-brand {
   height:100%;
-  padding: 12px;
+  padding: clamp(12px, 1.1vw, 1.1vw);
   display: flex;
   flex-direction: row;
-  gap: 1vw;
+  gap: clamp(10px, 1vw, 1vw);
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -172,16 +169,15 @@
 }
 
 .sidebar-brand .company-logo img {
-  width: 3.3vw;
-  min-width: 38px;
+  width: clamp(38px, 3.3vw, 3.3vw);
 }
 
 .sidebar-brand .company-name {
-  font-size: 1.1vw;
+  font-size: clamp(12px, 1.1vw, 1.1vw);
   font-weight: 700;
 
   height: 100%;
-  padding-left: .5vw;
+  padding-left: clamp(6px, .5vw, .5vw);
   color: black;
   display: flex;
   justify-content: center;
@@ -192,7 +188,7 @@
 
 .sidebar-list {
   padding: 0;
-  margin-top: 1.2vh;
+  margin-top: clamp(14px, 1.2vh, 1.2vw);
   list-style-type: none;
 
   height: 400px;
@@ -201,40 +197,40 @@
 .sidebar-list .ulContainer {
   display: flex;
   flex-direction: column;
-  gap: 1.6vh;
+  gap: clamp(20px, 1.6vw, 1.6vh);
   justify-content: space-between;
   height: 100%;
   width: 100%;
 }
 
 .sidebar-list li {
-  padding: .8vw .9vw;
-  font-size: 1.3vw;
-  margin-left: .8vw;
-  border-radius: 2vw 0 0 2vw;
-  margin-bottom: 8px;
+  padding: clamp(9px, .8vw, .8vw);
+  font-size: clamp(14px, 1.3vw, 1.3vw);
+  margin-left: clamp(9px, .8vw, .8vw);
+  border-radius: clamp(27px, 2vw, 2vw) 0 0 clamp(27px, 2vw, 2vw);
+  margin-bottom: clamp(8px, .7vw, .7vw);
 }
 
 .sidebar-list li:hover {
-  border-radius: 1.6vw;
+  border-radius: clamp(20px, 1.6vw, 1.6vw);
   background: #8988886c;
-  padding-right: 1vw;
-  margin-right: 1vw;
+  padding-right: clamp(10px, 1vw, 1vw);
+  margin-right: clamp(10px, 1vw, 1vw);
 }
 
 .sidebar-list .active {
   view-transition-name: activeTab;
   position: relative;
   background: rgb(232, 232, 232);
-  margin-bottom: 1.4vw;
-  margin-top: 1.6vw;
-  padding-right: .8vw;
+  margin-bottom: clamp(16px, 1.4vw, 1.4vw);
+  margin-top: clamp(20px, 1.6vw, 1.6vw);
+  padding-right: clamp(9px, .8vw, .8vw);
   margin-right: 0;
 }
 
 .sidebar-list .active:hover {
   background: rgb(232, 232, 232);
-  border-radius: 2vw 0 0 2vw;
+  border-radius: clamp(27px, 2vw, 2vw) 0 0 clamp(27px, 2vw, 2vw);
   margin-right: 0;
 }
 
@@ -244,7 +240,7 @@
 
 .sidebar-list .active::before,
 .sidebar-list .active::after {
-  --border-radius: 1.6vw;
+  --border-radius: clamp(20px, 1.6vw, 1.6vw);
 
   content: '';
   position: absolute;
@@ -256,19 +252,19 @@
 
 .sidebar-list .active::before {
   top: calc(var(--border-radius) * -1);
-  border-radius: 0 0 100vw 0;
-  box-shadow: 1vw 1vw 0 1vw rgb(232, 232, 232);
+  border-radius: 0 0 clamp(25px, 100vw, 100vw) 0;
+  box-shadow: clamp(10px, 1vw, 1vw) clamp(10px, 1vw, 1vw) 0 clamp(10px, 1vw, 1vw) rgb(232, 232, 232);
 }
 
 .sidebar-list .active::after {
   bottom: calc(var(--border-radius) * -1);
   border-radius: 0 100vw 0 0;
-  box-shadow: 1vw -1vw 0 1vw rgb(232, 232, 232);
+  box-shadow: clamp(10px, 1vw, 1vw) clamp(-14px, -10vw, -10vw) 0 clamp(10px, 1vw, 1vw) rgb(232, 232, 232);
 }
 
 .sidebar-list .sideIcon {
   display: flex;
-  gap: 1.8vw;
+  gap: clamp(23px, 1.8vw, 1.8vw);
   align-items: center;
 }
 
@@ -288,20 +284,18 @@
 }
 /*----General main section----*/
 .cart-logo {
-  height: 70px;
-  width: 70px;
-  min-width: 70px;
+  height: 90%;
+  width: clamp(70px, 12vh, 12vh);
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: clamp(10px, 1vw, 1vw);
 }
 
 .cart-logo .fa-cart-plus {
-  font-size: clamp(25px, 1.9vw, 1.9vw);
-  color: black;
+  font-size: clamp(25px, 5vh, 5vh);
 }
 
 .cart-logo .cart-tip {
@@ -309,10 +303,10 @@
   position: absolute;
   width: fit-content;
 
-  bottom: 4px;
+  bottom: clamp(-4px, -.35vw, -.35vw);
   opacity: 0;
-  background-color: #898888;
-  padding: 2px 5px;
+  background-color: #ff8c00;
+  padding: clamp(2px, .18vw, .18vw) clamp(5px, .4vw, .4vw);
   font-size: clamp(10px, 1vw, 1vw);
   font-weight: normal;
   border: none;
@@ -330,17 +324,30 @@
   }
 }
 
-.cart-badge {
+/*.cart-badge {
   text-align: center;
-  background: #ff8c00;
+  background: #ff0f0fc7;
   color: white;
   border-radius: 50%;
-  padding: 0px 4px;
+  padding: 0 clamp(4px, .35vw, .35vw);
   font-size: clamp(14px, 1.25vw, 1.25vw);
 
   position: absolute;
-  right: 12px;
-  top: 16px;
+  top: clamp(6px, .3vw, .3vw);
+  right: clamp(12px, .6vw, .6vw);
+}*/
+
+.cart-badge {
+  text-align: center;
+  background: #ff0f0fc7;
+  color: white;
+  border-radius: 50%;
+  padding: clamp(3px, .23vw, .23vw) clamp(3px, .25vw, .25vw);
+  font-size: clamp(14px, 1.25vw, 1.25vw);
+
+  position: absolute;
+  top: clamp(6px, .3vw, .3vw);
+  right: clamp(12px, .6vw, .6vw);
 }
 
 .sidebar-list .question {
@@ -348,7 +355,6 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  font-weight: 600;
   position: relative;
   color: black;
 }
@@ -363,9 +369,10 @@
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
   text-align: left;
-  margin-top: .4vw;
+  margin-top: (.4vw);
   color: #898888;
-  font-size: 1.4vw;
+  font-size: clamp(16px, 1.4vw, 1.4vw);
+  padding-top: clamp(7px, .6vw, .6vw);
 }
 
 .sidebar-list .answer a {
@@ -374,21 +381,21 @@
 
 .sidebar-list .answer li {
   list-style: none;
-  box-shadow: 2px 0px 4px #89888871;
+  box-shadow: 0 clamp(-1px, -.1vw, -.18vw) clamp(2px, .18vw, .18vw) rgba(48, 47, 47, 0.9);
   text-decoration: none;
   color:  black;
   
-  padding: .5rem 1rem;
+  padding: clamp(.5rem, .5vw, .5vw) clamp(1rem, 1.7vw, 1.7vw);
   font-size: clamp(15px, 1.3vw, 1.3vw);
-  margin-left: 2rem;
-  border-radius: 25px 0 0 25px;
-  margin-bottom: 8px;
+  margin-left: clamp(2rem, 3.3vw, 3.3vw);
+  border-radius: clamp(25px, 1.9vw, 1.9vw) 0 0 clamp(25px, 1.9vw, 1.9vw);
+  margin-bottom: clamp(8px, .7vw, .7vw);
 }
 
 .sidebar-list .answer li:hover {
   margin-right: 0;
   box-shadow: none;
-  padding-right: .5rem;
+  padding-right: clamp(.5rem, 1vw, 1vw);
 }
 
 .sidebar-list .answer li.current {
@@ -405,7 +412,7 @@
 
 .question .arrow {
   display: inline-block;
-  margin-left: -16px;
+  margin-left: clamp(-16px, -1.4vw, -1.4vw);
   transition: transform 1s ease;
   font-size: clamp(12px, 1.1vw, 1.1vw);
 }
@@ -433,32 +440,32 @@
   justify-content: space-between;
   align-items: center;
   width: 99%;
-  padding: .4vw 1vw;
+  padding: clamp(5px, .4vw, .4vw) clamp(10px, 1vw, 1vw);
   margin: 0 auto;
-  border-radius: .4vw;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: clamp(5px, .4vw, .4vw);
+  box-shadow: 0 clamp(10px, 1vw, 1vw) clamp(20px, 1.6vw, 1.6vw) rgba(0, 0, 0, 0.3);
 }
 
 .main-container .dashHeader i {
-  font-size: 1.8px;
+  font-size: clamp(18px, 1.5vw, 1.5vw);
 }
 
 .main-container .topHeader {
   text-align: left;
-  font-size: 1.2vw;
+  font-size: clamp(14px, 1.2vw, 1.2vw);
   font-weight: bold;
   color: #065577;
 }
 
 .main-container .dashTitle {
-  font-size: 1.4vw;
+  font-size: clamp(16px, 1.4vw, 1.4vw);
 }
 
 .allDashmainDiv {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.6vw;
+  gap: clamp(20px, 1.6vw, 1.6vw);
   min-height: 100vh;
 }
 
@@ -466,7 +473,7 @@
 .dashBrivian {
   display: flex;
   justify-content: space-between;
-  gap: 1.6vw;
+  gap: clamp(20px, 1.6vw, 1.6vw);
   padding: 0 1.6vw 0 3.2vw;
   width: 100%;
 }
@@ -500,7 +507,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.6vw;
-  border-bottom: 1px solid #898888;
+  border-bottom: clamp(1px, .08vw, .08vw) solid #898888;
   padding: .4vw .4vw 1vw .4vw;
   color: white;
 }
@@ -519,7 +526,7 @@
 }
 
 .dashBrivian .accounth3AndDetails .accountStatusDiv .body p {
-  font-size: 1.2vw;
+  font-size: clamp(14px, 14px, 1.2vw);
 }
 
 .dashBrivian .accounth3AndDetails .accountStatusDiv .body .statusDiv {
@@ -598,7 +605,7 @@
 
 .dashBrivian .accountAnalytics .analyticsChild .childDetails p {
   text-align: left;
-  font-size: 1.1vw;
+  font-size: clamp(12px, 1.1vw, 1.1vw);
   font-weight: bold;
   color: #898888;
 }
@@ -621,7 +628,7 @@
   border-radius: 50%;
   border: .3vw solid #898888;
   text-align: center;
-  font-size: 1.4vw;
+  font-size: clamp(16px, 1.4vw, 1.4vw);
 }
 
 .dashBrivian .accountAnalytics .analyticsChild .progressInSection.affiliate {
@@ -700,14 +707,14 @@
  background-color: #fff;
  padding: 1.6vw;
  border-radius: 8px;
- box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ box-shadow: 0 0 clamp(10px, 1vw, 1vw) rgba(0, 0, 0, 0.1);
  width: 400px;
 }
 
 .container h1 {
  text-align: center;
  margin-bottom: clamp(20px, 1.6vw, 1.6vw);
- font-size: 1.2vw;
+ font-size: clamp(14px, 1.2vw, 1.2vw);
 }
 
 h1 span {
@@ -715,21 +722,21 @@ h1 span {
 }
 
 .form-group {
- margin-bottom: 15px;
+ margin-bottom: clamp(15px, 1.3vw, 1.3vw);
 }
 
 .form-group label {
  display: block;
- margin-bottom: 8px;
+ margin-bottom: clamp(8px, .7vw, .7vw);
 }
 
 input[type="number"],
 input[type="password"] {
  width: 100%;
- padding: 1vw;
- font-size: 1.4vw;
+ padding: clamp(10px, 1vw, 1vw);
+ font-size: clamp(16px, 1.4vw, 1.4vw);
  border: clamp(1px, .1vw, .1vw) solid #ccc;
- border-radius: 1.3vw;
+ border-radius: clamp(15px, 1.3vw, 1.3vw);
  outline: none;
 }
 
@@ -738,10 +745,10 @@ button {
  background-color: #065577;
  color: white;
  border: none;
- padding: 1.1vw;
+ padding: clamp(12px, 1.1vw, 1.1vw);
  font-size: clamp(16px, 1.4vw, 1.4vw);
  cursor: pointer;
- border-radius: 1.3vw;
+ border-radius: clamp(15px, 1.3vw, 1.3vw);
 }
 
 button:hover {
@@ -753,7 +760,7 @@ button:hover {
   width: 99%;
   margin: 0 auto;
   position: relative;
-  margin-top: -60px;
+  margin-top: clamp(-60px, -4.2vw, -4.2vw);
 }
 .tradingview-widget-container1 #tradingview_widget {
   width: 100%;
@@ -764,7 +771,7 @@ button:hover {
   margin: 0 auto;
   height: 100vh;
   position: relative;
-  margin-top: -20px;
+  margin-top: clamp(-20px, -1.6vw, -1.6vw);
 }
 
 .tradingview-widget-container #tradingview_a93d0 {

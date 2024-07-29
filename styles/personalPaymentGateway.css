@@ -23,7 +23,7 @@ body {
 }
 
 .payContainer .kushoto p {
-  padding: 30px 20px;
+  padding: clamp(30px, 2.2vw, 2.2vw) clamp(20px, 1.6vw, 1.6vw);
 }
 
 .payContainer hr {
@@ -32,11 +32,11 @@ body {
 }
 
 .methods {
-  padding: 10px 0;
+  padding: clamp(10px, 1vw, 1vw) 0;
 }
 
 .methods div {
-  padding: 7px 20px;
+  padding: clamp(7px, .65vw, .65vw) clamp(20px, 1.6vw, 1.6vw);
   cursor: pointer;
   font-size: clamp(15px, 1.3vw, 1.3vw);
 }
@@ -46,7 +46,7 @@ body {
 }
 
 .methods div:hover {
-  box-shadow: 0 0 6px rgba(48, 47, 47, 0.9);
+  box-shadow: 0 0 clamp(6px, .5vw, .5vw) rgba(48, 47, 47, 0.9);
 }
 
 .methods div::after {
@@ -57,21 +57,21 @@ body {
   height: 0;
   border-color: transparent;
   border-style: solid;
-  border-width: 4px 0 4px 4px;
+  border-width: clamp(4px, .34vw, .34vw) 0 clamp(4px, .34vw, .34vw) clamp(4px, .34vw, .34vw);
   border-left-color: var(--fondy-success);
-  margin-left: 10px;
+  margin-left: clamp(10px, 1vw, 1vw);
 }
 
 .payContainer .fa-solid {
-  margin-right: 10px;
+  margin-right: clamp(10px, 1vw, 1vw);
   font-size: clamp(20px, 1.6vw, 1.6vw);
   color: #898888;
 }
 
 .payContainer .katikati {
   width: 50%;
-  border-right: 1px solid #dedede;
-  border-left: 1px solid #dedede;
+  border-right: clamp(1px, .1vw, .1vw) solid #dedede;
+  border-left: clamp(1px, .1vw, .1vw) solid #dedede;
   height: 100%;
 }
 .payContainer .katikati p {
@@ -80,7 +80,7 @@ body {
 
 .payContainer .katikati a {
  width: 100%;
- padding: 15px;
+ padding: clamp(15px, 1.3vw, 1.3vw);
  display: flex;
  justify-content: center;
  align-items: center;
@@ -97,10 +97,10 @@ body {
 .payContainer .katikati .card-details .c-number {
   width: 100%;
   border: clamp(1px, .1vw, .1vw) solid #898888;
-  border-radius: 3px;
-  padding: 0 12px;
+  border-radius: clamp(3px, .27vw, .27vw);
+  padding: 0 clamp(12px, 1.1vw, 1.1vw);
   margin-top: clamp(10px, 1vw, 1vw);
-  height: 50px;
+  height: clamp(50px, 3.8vw, 3.8vw);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -108,7 +108,7 @@ body {
 
 .card-details input {
   border: none;
-  border-radius: 3px;
+  border-radius: clamp(3px, .27vw, .27vw);
   outline: none;
 }
 
@@ -120,24 +120,24 @@ body {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: clamp(20px, 1.6vw, 1.6vw) 0;
 }
 
 .payContainer .katikati .card-details .cc-exp {
   border: clamp(1px, .1vw, .1vw) solid #898888;
-  border-radius: 3px;
-  height: 50px;
+  border-radius: clamp(3px, .27vw, .27vw);
+  height: clamp(50px, 3.8vw, 3.8vw);
   margin-top: clamp(10px, 1vw, 1vw);
-  padding: 12px;
+  padding: clamp(12px, 1.1vw, 1.1vw);
   width: 150px;
 }
 
 .card-details .cvv-box {
   border: clamp(1px, .1vw, .1vw) solid #898888;
   margin-top: clamp(10px, 1vw, 1vw);
-  padding: 12px;
-  height: 50px;
-  border-radius: 3px;
+  padding: clamp(12px, 1.1vw, 1.1vw);
+  height: clamp(50px, 3.8vw, 3.8vw);
+  border-radius: clamp(3px, .27vw, .27vw);
   display: flex;
   justify-content: space-between;
   width: 100px;
@@ -150,9 +150,9 @@ body {
 .card-details .email input {
   width: 100%;
   border: clamp(1px, .1vw, .1vw) solid #898888;
-  border-radius: 3px;
-  padding: 12px;
-  height: 50px;
+  border-radius: clamp(3px, .27vw, .27vw);
+  padding: clamp(12px, 1.1vw, 1.1vw);
+  height: clamp(50px, 3.8vw, 3.8vw);
   margin-top: clamp(10px, 1vw, 1vw);
 } 
 
@@ -161,7 +161,7 @@ body {
 }
 
 .payContainer .kulia p {
-  padding: 30px 20px;
+  padding: clamp(30px, 2.2vw, 2.2vw) clamp(20px, 1.6vw, 1.6vw);
   font-weight: bold;
 }
 
@@ -170,7 +170,7 @@ body {
 }
 
 .payContainer .kulia .details div{
-  padding: 3px 0; 
+  padding: clamp(3px, .27vw, .27vw) 0; 
 }
 
 .payContainer .kulia .details .orderDesc {
@@ -181,7 +181,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: clamp(15px, 1.3vw, 1.3vw);
 }
 
 .payContainer .kulia a img {
@@ -191,11 +191,11 @@ body {
 button {
   width: 100%;
   border: none;
-  height: 40px;
-  margin-top: 30px;
+  height: clamp(40px, 3.2vw, 3.2vw);
+  margin-top: clamp(30px, 2.2vw, 2.2vw);
   font-size: clamp(18px, 1.5vw, 1.5vw);
   color: white;
-  background: #065577;
+  background: #005d00;
 }
 
 button:hover {

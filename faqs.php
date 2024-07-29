@@ -129,7 +129,7 @@
             No prior trading experience is required. Our courses are suitable for individuals with varying levels of experience, from complete beginners to seasoned traders looking to refine their skills.
           </div>
         </div>
-
+           
         <div class="faq-item">
           <div class="question" onclick="toggleAnswer(this)">
             How can your forex education platform help me as a beginner?<span class="arrow">▼</span>
@@ -194,7 +194,7 @@
         </div>
       </div>
     </div>
-    <!--footer section-->
+    <!--footer section-->   
     <footer>
       <div class="platform">
         <div class="platform-ih">
@@ -226,7 +226,7 @@
         <li><a href="contact-us.php">Contact&nbsp;Us</a></li>
       </ul>
 
-      <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
+      <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel's Developers</a>.</p>
     </footer>
 
     <script src="scripts/styles.js"></script>

@@ -97,7 +97,7 @@
       <a href="customerOder.php" class="cartPlaceOrder">Place&nbsp;Order</a>
     </main>
     <!--CALCULATOR-->
-    <section>
+    <section onkeydown="enterKeyCheck(event)">
       <div class="calculatorLayout">
         <h1>
           Accurate&nbsp;<span>Be.Trades</span><br>Position Sizing Calculator
@@ -109,7 +109,7 @@
               <option value="pips">Pips Calculator</option>
               <option value="normal">Normal Calculator</option>
             </select> 
-         </div>
+          </div>
   
           <div class="calculator" id="normalCalculator">
             <div class="display">
@@ -207,14 +207,14 @@
           <div class="calculator1" id="pipsCalculator">
             <div class="display1">
               <div class="content">
-                <!--<div class="categoryDisplay">
+                <div class="categoryDisplay">
                   <Label>Category :</Label>
                   <select name="" id="category">
                     <option value="Forex">Forex</option>
                     <option value="Commodities">Commodities</option>
                     <option value="Deriv">Deriv</option>
                   </select>
-                </div>-->
+                </div>
                 <div class="items__asset">
                   <div class="categoryDisplay currency">
                     <Label>Currency Pair :</Label>
@@ -488,7 +488,7 @@
         <li><a href="contact-us.php">Contact&nbsp;Us</a></li>
       </ul>
 
-      <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
+      <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel's Developers</a>.</p>
     </footer>
 
     <script defer src="scripts/pipsCalculator.js"></script>

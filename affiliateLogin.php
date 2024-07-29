@@ -1,13 +1,10 @@
 <?php
-// Include the database connection file
 include 'connection.php';
 
-// Initialize variables for error messages
 $error = '';
 
-// Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve and sanitize form inputs
+
     $email = htmlspecialchars(trim($_POST['mail']));
     $password = htmlspecialchars(trim($_POST['pass']));
 
@@ -88,11 +85,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                       <span>Password</span>
                       <i id="eye-icon" class="toggle-password fas fa-eye" onclick="togglePasswordVisibility()"></i>
                   </div>
-                  <input class="submit-btn" type="submit" value="Login">
+                  <input class="submit-btn" type="submit" value="Sign in">
                   <p>Don't have an account? <a href="affiliateSingUp.php">Register account.</a></p>
               </form>
           </div>
       </div>
+      
+      <div class="loginDescription">
+        <img src="images/login.jpg" alt="Sign in Image">
+        <p>Welcome back! We're thrilled to see you here again. Your continued support means the world to us. Let's make today even better together!</p>
+    </div>
   </div>
 </body>
 </html>

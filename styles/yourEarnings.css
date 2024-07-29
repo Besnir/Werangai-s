@@ -13,7 +13,7 @@ main.table1 {
   width: 82vw;
   height: 92vh;
   background: #dedede50;
-  border-radius: 1rem;
+  border-radius: clamp(1rem, 1.6vw, 1.6vw);
   box-shadow: 0 15px 10px rgba(0, 0, 0, 0.26);
   overflow: hidden;
   font-size: clamp(14px, 1.25vw, 1.25vw);
@@ -22,7 +22,7 @@ main.table1 {
 .tableHeader {
   width: 100%;
   height: 8%;
-  padding: 8px;
+  padding: clamp(8px, .7vw, .7vw);
   text-align: left;
   background: #065577;
   color: white;
@@ -38,7 +38,7 @@ main.table1 {
 .tableHeader.level2 {
   width: 100%;
   height: 8%;
-  padding: 8px;
+  padding: clamp(8px, .7vw, .7vw);
   text-align: left;
   background: #ff8c06;
   color: white;
@@ -48,7 +48,7 @@ main.table1 {
 .tableHeader.level3 {
   width: 100%;
   height: 8%;
-  padding: 8px;
+  padding: clamp(8px, .7vw, .7vw);
   text-align: left;
   background: green;
   color: white;
@@ -60,7 +60,7 @@ main.table1 {
   max-height: 89%;
   background: #89888829;
   margin: clamp(5px, .35vw, .35vw) auto;
-  border-radius: 10px;
+  border-radius: clamp(10px, 1vw, 1vw);
   overflow: auto;
 }
 
@@ -86,7 +86,7 @@ table {
 
 table, th, td {
   border-collapse: collapse;
-  padding: 12px;
+  padding: clamp(12px, 1.1vw, 1.1vw);
   text-align: left;
 }
 
@@ -112,7 +112,7 @@ tbody tr:nth-child(odd) {
 }
 
 tbody tr:nth-last-child(2) {
-  border-bottom: 1px solid black;
+  border-bottom: clamp(1px, .08vw, .08vw) solid black;
 }
 
 tbody tr:hover {

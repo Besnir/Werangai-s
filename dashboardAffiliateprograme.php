@@ -242,7 +242,7 @@ $conn->close();
         <div class="loweraffiliate">
           <h4>YOUR&nbsp;REFFERAL&nbsp;LINK:</h4>
           <p class="loweraffiliateLink"><?php echo htmlspecialchars($referral_link); ?></p>
-          <div class="linkbtn">
+          <div id="linkbtn" class="linkbtn">
             <button class="copy-btn" onclick="copyLink()">Copy&nbsp;Link</button>
             <button class="sharebtn" onclick="shareLink()">Share</button>
           </div>
@@ -284,7 +284,7 @@ $conn->close();
               </div>
             </div>
 
-            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
+            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel's Developers</a>.</p>
           </footer>
         </div>
       </main>

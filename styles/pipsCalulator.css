@@ -1,21 +1,19 @@
 section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
+  width: 100%;
+  height: fit-content;
   gap: clamp(20px, 1.6vw, 1.6vw);
-
-  padding-bottom: 50px;
+  padding: 0 clamp(12px, 2.5vw, 2.5vw) clamp(100px, 10vw, 10vw) clamp(12px, 2.5vw, 2.5vw);
 }
 
 section h1 {
   font-size: clamp(25px, 1.9vw, 1.9vw);
   font-weight: 700;
   color: black;
-}
-
-section h1.calMessage {
-  font-weight: normal;
+  padding: 0 20px;
 }
 
 section h1 span {
@@ -25,24 +23,25 @@ section h1 span {
 .calculatorLayout {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: clamp(25px, 1.9vw, 1.9vw);
-  width: 100%;
-  max-width: 450px;
+  width: clamp(420px, 35vw, 35vw);
+  min-width: 350px;
 }
 
 .calculatorDesc {
   display: flex;
   justify-content: center;
-  align-items: center;
+  max-width: clamp(550px, 50vw, 50vw);
 }
 
 .calculatorDesc h1 {
-  font-size: clamp(24px, 1.8vw, 1.8vw);
+  font-size: clamp(24px, 2.3vw, 2.3vw);
   padding: 0 clamp(20px, 1.6vw, 1.6vw);
   text-align: left;
   width: 100%;
   color: #065577;
-  max-width: 550px;
+  font-weight: normal;
 }
 
 .app {
@@ -51,32 +50,21 @@ section h1 span {
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 0 clamp(10px, 1vw, 1vw);
-}
-
-.calculator {
-  background: #065577;
   width: 100%;
-  max-width: 310px;
-  min-height: 440px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.26);
-  display: none;
+  padding: 0 clamp(10px, 1vw, 1vw);
 }
 
 .app .mode-toggle {
   background: #ff8c00;
   position: absolute;
-  top: 16px;
+  top: clamp(16px, 1.4vw, 1.4vw);
+  width: clamp(50%, 60%, 70%);
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 3px 5px;
-  border-radius: 8px;
+  padding: clamp(3px, .27vw, .27vw) clamp(5px, .35vw, .35vw);
+  border-radius: clamp(8px, .74vw, .74vw);
 
-  font-size: .7rem;
+  font-size: clamp(13px, 1.1vw, 1.1vw);
   color: #065577;
   font-weight: 700;
   border: none;
@@ -86,49 +74,62 @@ section h1 span {
 .mode-toggle select {
   background-color: #f0f0f0;
   color: black;
-  padding: 5px;
+  padding: clamp(5px, .35vw, .35vw);
   border: none;
-  border-radius: 5px;
+  border-radius: clamp(5px, .35vw, .35vw);
   outline: none;
   font-weight: 700;
-  font-size: .65rem;
   cursor: pointer;
+  font-size: clamp(13px, 1.1vw, 1.1vw);
+  margin-left: 5%;
 }
 
 .mode-toggle option {
   text-decoration: none;
   border: none;
   color: #898888;
-  font-size: .7rem;
   border-radius: 0;
+  font-size: clamp(13px, 1.1vw, 1.1vw);
   cursor: pointer;
+}
+
+.calculator {
+  background: #065577;
+  width: 100%;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  border-radius: clamp(1.5rem, 2.2vw, 2.2vw);
+  overflow: hidden;
+  box-shadow: 0 clamp(-2px, -.18vw, .18vw) clamp(16px, 1.4vw, 1.4vw) rgba(0, 0, 0, 0.26);
+  display: none;
 }
 
 .display {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  min-height: 120px;
-  padding: .5rem;
+  min-height: clamp(120px, 10vw, 10vw);
+  padding: clamp(.5rem, 1vw, 1vw);
   color: white;
   text-align: right;
   background: #ff8c0045;
-  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 clamp(-2px, -.18vw, -.18vw) clamp(16px, 1.4vw, 1.4vw) rgba(0, 0, 0, 0.26);
 
-  margin: 6px;
-  border-top-left-radius: 1.3rem;
-  border-top-right-radius: 1.3rem;
+  margin: clamp(6px, .55vw, .55vw);
+  border-top-left-radius: clamp(1.3rem, 1.95vw, 1.95vw);
+  border-top-right-radius: clamp(1.3rem, 1.95vw, 1.95vw);
   flex: 1 1 0%;
   overflow: hidden;
 }
 
 .display .input {
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
+  font-size: clamp(1rem, 1.6vw, 1.6vw);
+  margin-bottom: clamp(0.2rem, .35vw, .35vw);
 }
 
 .display .output {
-  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 3.2vw, 3.2vw);
   font-weight: 700;
   width: 100%;
   max-width: 100%;
@@ -146,14 +147,14 @@ section h1 span {
 
 .keys {
   background: #ff8c00;
-  padding: 1rem;
-  border-radius: 1rem 1rem 1.5rem 1.5rem;
+  padding: clamp(1rem, 1.6vw, 1.6vw);
+  border-radius: clamp(1rem, 1.6vw, 1.6vw) clamp(1rem, 1.6vw, 1.6vw) clamp(1.5rem, 2.2vw, 2.2vw) clamp(1.5rem, 2.2vw, 2.2vw);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-gap: 1rem;
-  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.26);
-  margin: 0 2px 2px 2px;
+  grid-gap: clamp(1rem, 1.6vw, 1.6vw);
+  box-shadow: 0 clamp(-2px, -.18vw, .18vw) clamp(16px, 1.4vw, 1.4vw) rgba(0, 0, 0, 0.26);
+  margin: 0 clamp(2px, .18vw, 1.8vw) clamp(2px, .18vw, 1.8vw) clamp(2px, .18vw, 1.8vw);
 }
 
 .keys .key {
@@ -162,9 +163,9 @@ section h1 span {
 
   display: block;
   height: 0;
-  padding-top: 70%;
+  padding-top: 55%;
   background: #065577;
-  border-radius: 1rem;
+  border-radius: clamp(1rem, 1.6vw, 1.6vw);
   transition: 0.2s;
   user-select: none;
 }
@@ -175,13 +176,13 @@ section h1 span {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.6vw, 1.6vw);
   font-weight: 700;
   color: white;
 }
 
 .keys .key:hover {
-  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 clamp(8px, .7vw, .7vw) rgba(0, 0, 0, 0.2);
 }
 
 .keys .key.operator span {
@@ -196,27 +197,26 @@ section h1 span {
 .calculator1 {
   background: #065577;
   width: 100%;
-  max-width: 310px;
   min-height: 440px;
   display: flex;
   flex-direction: column;
-  border-radius: 1.5rem;
+  border-radius: clamp(1.5rem, 2.2vw, 2.2vw);
   overflow: hidden;
-  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 clamp(-2px, -.18vw, .18vw) clamp(16px, 1.4vw, 1.4vw) rgba(0, 0, 0, 0.26);
 }
 
 .display1 {
   display: flex;
   min-height: 240px;
-  padding: 2rem .5rem .5rem .5rem;
+  padding: clamp(2rem, 3.5vw, 3.5vw) clamp(.5rem, 1vw, 1vw) clamp(.5rem, 1vw, 1vw) clamp(.5rem, 1vw, 1vw);
   color: white;
   text-align: right;
   background: white;
-  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 clamp(-2px, -.18vw, .18vw) clamp(16px, 1.4vw, 1.4vw) rgba(0, 0, 0, 0.26);
 
-  margin: 6px;
-  border-top-left-radius: 1.3rem;
-  border-top-right-radius: 1.3rem;
+  margin: clamp(6px, .55vw, .55vw);
+  border-top-left-radius: clamp(1.3rem, 1.95vw, 1.95vw);
+  border-top-right-radius: clamp(1.3rem, 1.95vw, 1.95vw);
   flex: 1 1 0%;
   overflow: hidden;
 }
@@ -233,7 +233,7 @@ section h1 span {
 }
 
 .display1 .content select {
-  font-size: .8rem;
+  font-size: clamp(.8rem, 1.2vw, 1.2vw);
   border: clamp(1px, .1vw, .1vw) solid #89888864;
   outline: none;
   background: #89888864;
@@ -242,7 +242,7 @@ section h1 span {
 .display1 .content select option {
   border: none;
   border-radius: 0;
-  font-size: .8rem;
+  font-size: clamp(.8rem, 1.2vw, 1.2vw);
   background-color: white;
   overflow: visible;
 }
@@ -271,7 +271,7 @@ section h1 span {
 
 .content .requiredInputs .theInput {
   display: flex;
-  gap: 5px;
+  gap: clamp(5px, .4vw, .4vw);
 }
 
 .content .requiredInputs .theInput .money {
@@ -283,11 +283,11 @@ section h1 span {
 }
 
 .display1 .input2 {
-  font-size: .9rem;
-  margin-bottom: .2rem;
+  font-size: clamp(.9rem, 1.4vw, 1.4vw);
+  margin-bottom: clamp(.2rem, .34vw, .34vw);
   width: 100%;
   border: clamp(1px, .1vw, .1vw) solid #898888a0;
-  padding: 2px 0 2px 5px;
+  padding: clamp(2px, .18vw, .18vw) 0 clamp(2px, .18vw, .18vw) clamp(5px, .4vw, .4vw);
   font-weight: bold;
   height: 80%;
 }
@@ -309,12 +309,12 @@ section h1 span {
   color: white;
   cursor: pointer;
   background: green;
-  padding: 2px 8px;
-  margin-left: -6px;
+  padding: clamp(2px, .3vw, .3vw) clamp(8px, .7vw, .7vw);
+  margin-left: clamp(-6px, -10vw, -10vw);
   font-size: clamp(14px, 1.25vw, 1.25vw);
   height: 80%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-right-radius: clamp(8px, .7vw, .7vw);
+  border-bottom-right-radius: clamp(8px, .7vw, .7vw);
   display: none;
 }
 
@@ -326,12 +326,12 @@ section h1 span {
   color: white;
   cursor: pointer;
   background: green;
-  padding: 2px 8px;
-  margin-left: -6px;
+  padding: clamp(2px, .3vw, .3vw) clamp(8px, .7vw, .7vw);
+  margin-left: clamp(-6px, -10vw, -10vw);
   font-size: clamp(14px, 1.25vw, 1.25vw);
   height: 80%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-right-radius: clamp(8px, .7vw, .7vw);
+  border-bottom-right-radius: clamp(8px, .7vw, .7vw);
   display: none;
 }
 
@@ -342,26 +342,26 @@ section h1 span {
 .content .switch-risk {
   width: 100%;
   text-align: right;
-  margin-top: -12px;
+  margin-top: clamp(-12px, -1.1vw, -1.1vw);
   color: white;
 }
 
 .content .switch-risk .switch {
   background: black;
-  padding: 2px;
+  padding: clamp(2px, .18vw, .18vw);
   cursor: pointer;
   font-size: clamp(14px, 1.25vw, 1.25vw);
   display: none;
 }
 
 .display1 .output1 {
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.6vw, 1.6vw);
   width: 100%;
   max-width: 100%;
   overflow: auto;
   background:#373e0064;
-  border-radius: .4rem;
-  padding: 4px;
+  border-radius: clamp(.4rem, .7vw, .7vw);
+  padding: clamp(4px, .3vw, .3vw);
   display: none;
 }
 
@@ -383,14 +383,14 @@ section h1 span {
 
 .keys1 {
   background: #ff8c00;
-  padding: 1rem;
-  border-radius: 1rem 1rem 0 0;
+  padding: clamp(1rem, 1.6vw, 1.6vw);
+  border-radius: clamp(1rem, 1.6vw, 1.6vw) clamp(1rem, 1.6vw, 1.6vw) 0 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 1rem;
-  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.26);
-  margin: 0 2px 2px 2px;
+  grid-gap: clamp(1rem, 1.6vw, 1.6vw);
+  box-shadow: 0 clamp(-2px, -.18vw, .18vw) clamp(16px, 1.4vw, 1.4vw) rgba(0, 0, 0, 0.26);
+  margin: 0 clamp(2px, .18vw, 1.8vw) clamp(2px, .18vw, 1.8vw) clamp(2px, .18vw, 1.8vw);
 }
 
 .keys1 .key1 {
@@ -401,7 +401,7 @@ section h1 span {
   height: 0;
   padding-top: 33%;
   background: #065577;
-  border-radius: 1rem;
+  border-radius: clamp(1rem, 1.6vw, 1.6vw);
   transition: 0.2s;
   user-select: none;
 }
@@ -412,7 +412,7 @@ section h1 span {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.6vw, 1.6vw);
   font-weight: 700;
   color: white;
 }
@@ -436,13 +436,13 @@ section h1 span {
 .keys2 .key1 {
   background: #ff8c00;
   cursor: pointer;
-  border-radius: 1rem;
+  border-radius: clamp(1rem, 1.6vw, 1.6vw);
   padding: clamp(9px, .8vw, .8vw);
   width: 50%;
 }
 
 .keys2 .key1 span {
-  font-size: .9rem;
+  font-size: clamp(.9rem, 1.58vw, 1.58vw);
   font-weight: 700;
 }
 
@@ -454,28 +454,36 @@ section h1 span {
   color: rgb(2, 74, 2);
 }
 
-@media (max-width: 640px) {
-  section h1 {
-    font-size: clamp(20px, 1.6vw, 1.6vw);
-  }
-
-  .calculator, .calculator1 {
-    width: 95%;
-    margin:0 auto;
-    max-width:500px;
-    min-height: 520px;
-    max-height: 90vh;
-  }
-}
-
-@media (max-width: 790Px) {
+@media (max-width: 790px) {
   section {
     flex-direction: column;
     gap: 40px;
   }
 
-  .calculatorDesc h1 {
-    max-width: 600px;
-    font-size: clamp(21px, 1.7vw, 1.7vw);
+  .calculatorLayout {
+    width: 60vw;
+    min-height: 90vw;
+  }
+
+  .calculatorDesc {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .calculatorLayout {
+    width: 73vw;
+  }
+}
+
+@media (max-width: 360px) {
+  .app .mode-toggle {
+    width: 70%;
+  }
+}
+
+@media (max-width: 350px) {
+  .calculatorLayout {
+    min-width: 310px;
   }
 }

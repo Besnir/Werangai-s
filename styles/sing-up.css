@@ -1,14 +1,15 @@
 .menu li a {
-  border-bottom: 1px solid #065577;
+  border-bottom: clamp(1px, .08vw, .08vw) solid #065577;
 }
 
 .sing-up-bar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: clamp(30px, 2vw, 2vw);
   padding: clamp(20px, 1.6vw, 1.6vw) 10px;
   margin-bottom: 50px;
+  padding: clamp(50px, 4.5vw, 4.5vw) clamp(12px, 2.5vw, 2.5vw) clamp(100px, 10vw, 10vw);
 }
 
 .signupWelcome {
@@ -16,7 +17,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: clamp(30px, 2vw, 2vw);
 }
 
 .loginWelcome {
@@ -24,7 +25,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: clamp(30px, 2vw, 2vw);
+  min-width: clamp(300px, 30vw, 30vw);
 }
 
 .signupWelcome .welcomeMessg {
@@ -32,7 +34,7 @@
   font-size: clamp(25px, 1.9vw, 1.9vw);
   text-align: center;
   display: inline-block;
-  max-width: 300px;
+  max-width: clamp(300px, 24vw, 24vw);
 }
 
 .loginWelcome .welcomeMessg {
@@ -51,10 +53,11 @@
 }
 
 .sign-up {
-  max-width: 320px;
-  min-width: 320px;
+  width: 100%;
+  max-width: clamp(320px, 30vw, 30vw);
+  min-width: 310px;
   background: white;
-  padding: 15px;
+  padding: clamp(15px, 1.3vw, 1.3vw);
   border: clamp(1px, .1vw, .1vw) solid #898888;
   border-radius: clamp(25px, 1.9vw, 1.9vw);
   box-shadow: 0 clamp(15px, 1.3vw, 1.3vw) clamp(35px, 2.3vw, 2.3vw) rgba(0, 0, 0, 0.26);
@@ -68,10 +71,10 @@
   border: clamp(1px, .1vw, .1vw) solid #898888;
   text-align: center;
   background: #dedede;
-  padding: 6px 0;
-  border-radius: 14px;
+  padding: clamp(6px, .5vw, .5vw) 0;
+  border-radius: clamp(14px, 1.25vw, 1.25vw);
   transition: .5s ease-in;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 clamp(2px, .18vw, .18vw) clamp(2px, .18vw, .18vw) rgba(0, 0, 0, 0.26);
 }
 
 .sign-up h1 {
@@ -101,7 +104,7 @@ form .inp-box {
 .toggle-password {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: clamp(10px, 1vw, 1vw);
   transform: translateY(-50%);
   cursor: pointer;
 }
@@ -117,18 +120,19 @@ form .inp-box {
 
 form input, form .inp-box #countrySelect {
   width: 100%;
-  padding: 6px 0;
+  padding: clamp(6px, .5vw, .5vw) 0;
   font-size: clamp(16px, 1.4vw, 1.4vw);
   min-width: 60px;
   margin: clamp(5px, .35vw, .35vw) 0;
   border: none;
-  border-bottom: 1px solid #24262b;
-  border-right: 1px solid #24262b;
+  border-bottom: clamp(1px, .08vw, .08vw) solid #24262b;
+  border-right: clamp(1px, .1vw, .1vw) solid #24262b;
   outline: none;
   resize: none;
-  border-radius: 14px;
+  border-radius: clamp(14px, 1.25vw, 1.25vw);
+  border-top-left-radius: 0;
   transition: .5s ease-in;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 clamp(2px, .18vw, .18vw) clamp(2px, .18vw, .18vw) rgba(0, 0, 0, 0.26);
 }
 
 form input:hover {
@@ -137,11 +141,11 @@ form input:hover {
 
 form span {
   position: absolute;
-  left: 2px;
-  top: -2px;
-  padding: 5px 0;
+  left: clamp(2px, .3vw, .3vw);
+  top: clamp(-2px, -.18vw, -.18vw);
+  padding: clamp(5px, .35vw, .35vw) 0;
   font-size: clamp(14px, 1.25vw, 1.25vw);
-  margin: 10px 0;
+  margin: clamp(10px, 1vw, 1vw) 0;
   pointer-events: none;
   transition: .5s;
   color: #666;
@@ -151,7 +155,7 @@ form input:focus ~ span,
 form input:valid ~ span {
   color: #ff8c00;
   font-size: clamp(12px, 1.1vw, 1.1vw);
-  transform: translateY(-1.5vw);
+  transform: translateY(-2.1vw);
 }
 
 form .submit-btn {
@@ -162,8 +166,8 @@ form .submit-btn {
   padding: clamp(9px, .8vw, .8vw);
   font-size: clamp(15px, 1.3vw, 1.3vw);
   border: none;
-  border-radius: 18px;
-  margin-top: (10px);
+  border-radius: clamp(18px, 1.5vw, 1.5vw);
+  margin-top: clamp(10px, 1vw, 1vw);
   transition: transform .5s ease;
 }
 
@@ -199,9 +203,8 @@ form a {
   flex-direction: column;
   align-items: center;
   height: fit-content;
-  padding: clamp(10px, 1vw, 1vw);
   color: white;
-  font-size: clamp(18px, 1.5vw, 1.5vw);
+  font-size: clamp(18px, 1.6vw, 1.6vw);
 }
 
 .loginDescription {
@@ -211,41 +214,41 @@ form a {
   flex-direction: column;
   align-items: center;
   height: fit-content;
-  padding: 10px 20px;
+  padding: clamp(10px, 1vw, 1vw) clamp(20px, 1.6vw, 1.6vw);
   color: white;
-  font-size: clamp(18px, 1.5vw, 1.5vw);
+  font-size: clamp(18px, 1.6vw, 1.6vw);
 }
 
 .signupDescription img {
-  height: 350px;
+  height: clamp(350px, 30vw, 30vw);
   width: 100%;
   margin: 0 auto;
-  max-width: 570px;
+  max-width: clamp(570px, 50vw, 50vw);
   object-fit: cover;
 }
 
 .loginDescription img {
-  height: 250px;
+  height: clamp(250px, 19vw, 19vw);
   width: 100%;
   margin: 0 auto;
-  max-width: 570px;
+  max-width: clamp(570px, 50vw, 50vw);
   object-fit: cover;
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-top-left-radius: clamp(30px, 2.6vw, 2.6vw);
+  border-bottom-right-radius: clamp(30px, 2.6vw, 2.6vw);
 }
 
 .signupDescription p {
   text-align: left;
   display: inline-block;
   color: #898989;
-  max-width: 600px;
+  max-width: clamp(600px,55vw, 55vw);
 }
 
 .loginDescription p {
   text-align: left;
   display: inline-block;
   color: #898989;
-  max-width: 600px;
+  max-width: clamp(600px,55vw, 55vw);
 }
 
 @media (max-width: 1100px) {
@@ -253,9 +256,7 @@ form a {
   form input:valid ~ span {
     transform: translateY(-18px);
   }
-}
 
-@media (max-width: 1100px) {
   .menu li a {
     border-bottom: none;
   }
@@ -275,12 +276,12 @@ form a {
     display: none;
   } 
 
-  .signupDescription p {
-    font-size: clamp(16px, 1.4vw, 1.4vw);
-  }
+  .loginDescription img {
+    display: none;
+  } 
 
-  .loginDescription p {
-    font-size: clamp(16px, 1.4vw, 1.4vw);
+  .signupDescription p, .loginDescription p {
+    font-size: 20px;
   }
 }
 

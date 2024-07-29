@@ -153,7 +153,8 @@ include 'dashboardConnect.php';
           <div class="video-grid">
             <div class="vgHeader">
               <h1>COMPLETE FOREX&nbsp;COURSE</h1>
-              <p>This course is worth dollars elsewhere. Waste no time and start learning now!</p></div>
+              <p>This course is worth dollars elsewhere. Waste no time and start learning now!</p>
+            </div>
 
             <div class="tProfile">
               <h4>Turtor and Developer</h4>
@@ -221,12 +222,12 @@ include 'dashboardConnect.php';
               </div>
               <div class="video-and-titles">
                 <p>
-                We are excited to offer you a free comprehensive forex trading course! This course covers everything you need to ensure you gain a thorough understanding of the forex market. It is perfect for both beginners and those looking to enhance their trading skills. Join us to boost your trading knowledge and confidence!
-              </p>
-              <div class="progressCircle">
-                <p>Progress</p>
-                <div class="percentageDiv">25%</div>
-              </div>
+                  We are excited to offer you a free comprehensive forex trading course! This course covers everything you need to ensure you gain a thorough understanding of the forex market. It is perfect for both beginners and those looking to enhance their trading skills. Join us to boost your trading knowledge and confidence!
+                </p>
+                <div class="progressCircle">
+                  <p>Progress</p>
+                  <div class="percentageDiv">25%</div>
+                </div>
               </div>
             </div>
           </div>
@@ -256,7 +257,7 @@ include 'dashboardConnect.php';
               </div>
             </div>
 
-            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
+            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel's Developers</a>.</p>
           </footer>
         </div>
       </main>

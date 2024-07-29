@@ -142,11 +142,12 @@ include 'dashboardConnect.php';
       <!-- Main -->
       <main class="main-container">
         <div class="allDashmainDiv">
+
           <div class="main">
             <div class="faqsheader">
               <h1>QUESTION <span>&</span> ANSWER</h1>
             </div>
-      
+
             <div class="faq-container">
               <div class="faq-item">
                 <div class="question" onclick="toggleAnswer(this)">
@@ -154,6 +155,15 @@ include 'dashboardConnect.php';
                 </div>
                 <div class="answer">
                   Our website provides comprehensive training and mentoring services for both new and experienced traders. We offer educational resources, trading tools, and personalized guidance to help you succeed in the trading world.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">
+                  What training programs do you offer?<span class="arrow">▼</span>
+                </div>
+                <div class="answer">
+                  We offer a variety of training programs, including free beginner course, advanced trading strategies (mentorship course), live webinars, and one-on-one mentoring sessions.
                 </div>
               </div>
               
@@ -165,7 +175,7 @@ include 'dashboardConnect.php';
                   No prior trading experience is required. Our courses are suitable for individuals with varying levels of experience, from complete beginners to seasoned traders looking to refine their skills.
                 </div>
               </div>
-      
+                
               <div class="faq-item">
                 <div class="question" onclick="toggleAnswer(this)">
                   How can your forex education platform help me as a beginner?<span class="arrow">▼</span>
@@ -183,6 +193,42 @@ include 'dashboardConnect.php';
                   Our services are designed for anyone interested in trading, whether you are a complete beginner looking to learn the basics or an experienced trader seeking advanced strategies and mentorship.
                 </div>
               </div>
+
+              <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">
+                  Is the training suitable for beginners?<span class="arrow">▼</span>
+                </div>
+                <div class="answer">
+                  Yes, we have tailored training programs specifically for beginners, covering fundamental concepts, trading strategies, and risk management.
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">
+                  What are the payment methods available?<span class="arrow">▼</span>
+                </div>
+                <div class="answer">
+                  <p>We accept various payment methods, including credit/debit cards, PayPal, and mobile money (such as M-Pesa in Kenya).</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">
+                  Do you provide investment advice?<span class="arrow">▼</span>
+                </div>
+                <div class="answer">
+                  While we provide educational resources and mentoring, we do not offer specific investment advice. All trading decisions are ultimately your own responsibility.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">
+                  Is my personal information secure?<span class="arrow">▼</span>
+                </div>
+                <div class="answer">
+                  Yes, we take your privacy and security very seriously. Our website uses advanced encryption and security measures to protect your personal information.
+                </div>
+              </div>
               
               <div class="faq-item">
                 <div class="question" onclick="toggleAnswer(this)">
@@ -190,15 +236,6 @@ include 'dashboardConnect.php';
                 </div>
                 <div class="answer">
                   <p>Our platform offers a unique blend of educational content, interactive learning tools, and personalized support from experienced traders. Additionally, our affiliate program provides opportunities for our members to earn passive income by referring others to our platform.</p>
-                </div>
-              </div>
-      
-              <div class="faq-item">
-                <div class="question" onclick="toggleAnswer(this)">
-                  Is the training suitable for beginners?<span class="arrow">▼</span>
-                </div>
-                <div class="answer">
-                  Yes, we have tailored training programs specifically for beginners, covering fundamental concepts, trading strategies, and risk management.
                 </div>
               </div>
             </div>
@@ -237,7 +274,7 @@ include 'dashboardConnect.php';
               </div>
             </div>
 
-            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel Werangai</a>.</p>
+            <p>Copyright &copy; 2024 <span>Be.Trades </span>&#8226; All rights reserved. Site built by <a href="https://www.instagram.com/blessedemmanuel254">Emmanuel's Developers</a>.</p>
           </footer>
         </div>
       </main>
