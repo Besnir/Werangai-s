@@ -3,13 +3,13 @@ const normalCalculator = document.getElementById('normalCalculator');
 const pipsCalculator = document.getElementById('pipsCalculator');
 
 modeSelect.addEventListener('change', function() {
-		if (modeSelect.value === 'normal') {
-				normalCalculator.style.display = 'flex';
-				pipsCalculator.style.display = 'none';
-		} else if (modeSelect.value === 'pips') {
-				normalCalculator.style.display = 'none';
-				pipsCalculator.style.display = 'flex';
-		}
+    if (modeSelect.value === 'normal') {
+        normalCalculator.style.display = 'flex';
+        pipsCalculator.style.display = 'none';
+    } else if (modeSelect.value === 'pips') {
+        normalCalculator.style.display = 'none';
+        pipsCalculator.style.display = 'flex';
+    }
 });
 
 const keys = document.querySelectorAll('.key');
@@ -19,124 +19,136 @@ const display_output = document.querySelector('.display .output');
 let input = "";
 
 for (let key of keys) {
-	const value = key.dataset.key;
+    const value = key.dataset.key;
 
-	key.addEventListener('click', () => {
-		if (value == "clear") {
-			input = "";
-			display_input.innerHTML = "";
-			display_output.innerHTML = "";
-		} else if (value == "backspace") {
-			input = input.slice(0, -1);
-			display_input.innerHTML = CleanInput(input);
-		} else if (value == "=") {
-			let result = eval(PerpareInput(input));
+    key.addEventListener('click', () => {
+        handleCalculatorInput(value);
+    });
+}
 
-			display_output.innerHTML = CleanOutput(result);
-		} else if (value == "brackets") {
-			if (
-				input.indexOf("(") == -1 || 
-				input.indexOf("(") != -1 && 
-				input.indexOf(")") != -1 && 
-				input.lastIndexOf("(") < input.lastIndexOf(")")
-			) {
-				input += "(";
-			} else if (
-				input.indexOf("(") != -1 && 
-				input.indexOf(")") == -1 || 
-				input.indexOf("(") != -1 &&
-				input.indexOf(")") != -1 &&
-				input.lastIndexOf("(") > input.lastIndexOf(")")
-			) {
-				input += ")";
-			}
-
-			display_input.innerHTML = CleanInput(input);
-		} else {
-			if (ValidateInput(value)) {
-				input += value;
-				display_input.innerHTML = CleanInput(input);
-			}
-		}
-	})
+function handleCalculatorInput(value) {
+    if (value == "clear") {
+        input = "";
+        display_input.innerHTML = "";
+        display_output.innerHTML = "";
+    } else if (value == "backspace") {
+        input = input.slice(0, -1);
+        display_input.innerHTML = CleanInput(input);
+    } else if (value == "=") {
+        let result = eval(PerpareInput(input));
+        display_output.innerHTML = CleanOutput(result);
+    } else if (value == "brackets") {
+        if (
+            input.indexOf("(") == -1 ||
+            (input.indexOf("(") != -1 && input.indexOf(")") != -1 && input.lastIndexOf("(") < input.lastIndexOf(")"))
+        ) {
+            input += "(";
+        } else if (
+            (input.indexOf("(") != -1 && input.indexOf(")") == -1) ||
+            (input.indexOf("(") != -1 && input.indexOf(")") != -1 && input.lastIndexOf("(") > input.lastIndexOf(")"))
+        ) {
+            input += ")";
+        }
+        display_input.innerHTML = CleanInput(input);
+    } else {
+        if (ValidateInput(value)) {
+            input += value;
+            display_input.innerHTML = CleanInput(input);
+        }
+    }
 }
 
 function CleanInput(input) {
-	let input_array = input.split("");
-	let input_array_length = input_array.length;
+    let input_array = input.split("");
+    let input_array_length = input_array.length;
 
-	for (let i = 0; i < input_array_length; i++) {
-		if (input_array[i] == "*") {
-			input_array[i] = ` <span class="operator">x</span> `;
-		} else if (input_array[i] == "/") {
-			input_array[i] = ` <span class="operator">÷</span> `;
-		} else if (input_array[i] == "+") {
-			input_array[i] = ` <span class="operator">+</span> `;
-		} else if (input_array[i] == "-") {
-			input_array[i] = ` <span class="operator">-</span> `;
-		} else if (input_array[i] == "(") {
-			input_array[i] = `<span class="brackets">(</span>`;
-		} else if (input_array[i] == ")") {
-			input_array[i] = `<span class="brackets">)</span>`;
-		} else if (input_array[i] == "%") {
-			input_array[i] = `<span class="percent">%</span>`;
-		}
-	}
+    for (let i = 0; i < input_array_length; i++) {
+        if (input_array[i] == "*") {
+            input_array[i] = ` <span class="operator">x</span> `;
+        } else if (input_array[i] == "/") {
+            input_array[i] = ` <span class="operator">÷</span> `;
+        } else if (input_array[i] == "+") {
+            input_array[i] = ` <span class="operator">+</span> `;
+        } else if (input_array[i] == "-") {
+            input_array[i] = ` <span class="operator">-</span> `;
+        } else if (input_array[i] == "(") {
+            input_array[i] = `<span class="brackets">(</span>`;
+        } else if (input_array[i] == ")") {
+            input_array[i] = `<span class="brackets">)</span>`;
+        } else if (input_array[i] == "%") {
+            input_array[i] = `<span class="percent">%</span>`;
+        }
+    }
 
-	return input_array.join("");
+    return input_array.join("");
 }
 
-function CleanOutput (output) {
-	let output_string = output.toString();
-	let decimal = output_string.split(".")[1];
-	output_string = output_string.split(".")[0];
+function CleanOutput(output) {
+    let output_string = output.toString();
+    let decimal = output_string.split(".")[1];
+    output_string = output_string.split(".")[0];
 
-	let output_array = output_string.split("");
+    let output_array = output_string.split("");
 
-	if (output_array.length > 3) {
-		for (let i = output_array.length - 3; i > 0; i -= 3) {
-			output_array.splice(i, 0, ",");
-		}
-	}
+    if (output_array.length > 3) {
+        for (let i = output_array.length - 3; i > 0; i -= 3) {
+            output_array.splice(i, 0, ",");
+        }
+    }
 
-	if (decimal) {
-		output_array.push(".");
-		output_array.push(decimal);
-	}
+    if (decimal) {
+        output_array.push(".");
+        output_array.push(decimal);
+    }
 
-	return output_array.join("");
+    return output_array.join("");
 }
 
-function ValidateInput (value) {
-	let last_input = input.slice(-1);
-	let operators = ["+", "-", "*", "/"];
+function ValidateInput(value) {
+    let last_input = input.slice(-1);
+    let operators = ["+", "-", "*", "/"];
 
-	if (value == "." && last_input == ".") {
-		return false;
-	}
+    if (value == "." && last_input == ".") {
+        return false;
+    }
 
-	if (operators.includes(value)) {
-		if (operators.includes(last_input)) {
-			return false;
-		} else {
-			return true;
-		}
-	}
+    if (operators.includes(value)) {
+        if (operators.includes(last_input)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
-	return true;
+    return true;
 }
 
-function PerpareInput (input) {
-	let input_array = input.split("");
+function PerpareInput(input) {
+    let input_array = input.split("");
 
-	for (let i = 0; i < input_array.length; i++) {
-		if (input_array[i] == "%") {
-			input_array[i] = "/100";
-		}
-	}
+    for (let i = 0; i < input_array.length; i++) {
+        if (input_array[i] == "%") {
+            input_array[i] = "/100";
+        }
+    }
 
-	return input_array.join("");
+    return input_array.join("");
 }
+
+// Add the onkeydown functionality
+document.addEventListener('keydown', function(event) {
+    const key = event.key;
+    
+    if (key >= '0' && key <= '9' || key === '.' || key === '*' || key === '/' || key === '+' || key === '-' || key === '(' || key === ')') {
+        handleCalculatorInput(key);
+    } else if (key === 'Backspace') {
+        handleCalculatorInput('backspace');
+    } else if (key === 'Enter' || key === '=') {
+        handleCalculatorInput('=');
+    } else if (key === 'Escape') {
+        handleCalculatorInput('clear');
+    }
+});
 
 // Position Sizing Calculator
 const category = document.getElementById('category');
@@ -433,50 +445,55 @@ for (let key of keys1) {
 	})
 }
 
+// Add onkeydown event listener
+document.addEventListener('keydown', function(event) {
+	const key = event.key;
+	const validKeys = '0123456789+-*/%=()';
+	if (validKeys.includes(key) || key === 'Enter' || key === 'Backspace' || key === 'Escape') {
+			if (key === 'Enter') {
+					keyPress('=');
+			} else if (key === 'Backspace') {
+					keyPress('backspace');
+			} else if (key === 'Escape') {
+					keyPress('clear');
+			} else {
+					keyPress(key);
+			}
+	}
+});
+
+function keyPress(key) {
+	const value = key === 'Enter' ? '=' : key;
+	const virtualKey = Array.from(keys1).find(k => k.dataset.key === value);
+
+	if (virtualKey) {
+			virtualKey.click();
+	}
+}
+
 function CleanInput(input1) {
 	let input_array1 = input1.split("");
 	let input_array_length1 = input_array1.length;
 
 	for (let i = 0; i < input_array_length1; i++) {
-		if (input_array1[i] == "*") {
-			input_array1[i] = ` <span class="operator">x</span> `;
-		} else if (input_array1[i] == "/") {
-			input_array1[i] = ` <span class="operator">÷</span> `;
-		} else if (input_array1[i] == "+") {
-			input_array1[i] = ` <span class="operator">+</span> `;
-		} else if (input_array1[i] == "-") {
-			input_array1[i] = ` <span class="operator">-</span> `;
-		} else if (input_array1[i] == "(") {
-			input_array1[i] = `<span class="brackets">(</span>`;
-		} else if (input_array1[i] == ")") {
-			input_array1[i] = `<span class="brackets">)</span>`;
-		} else if (input_array1[i] == "%") {
-			input_array1[i] = `<span class="percent">%</span>`;
-		}
+			if (input_array1[i] == "*") {
+					input_array1[i] = ` <span class="operator">x</span> `;
+			} else if (input_array1[i] == "/") {
+					input_array1[i] = ` <span class="operator">÷</span> `;
+			} else if (input_array1[i] == "+") {
+					input_array1[i] = ` <span class="operator">+</span> `;
+			} else if (input_array1[i] == "-") {
+					input_array1[i] = ` <span class="operator">-</span> `;
+			} else if (input_array1[i] == "(") {
+					input_array1[i] = `<span class="brackets">(</span>`;
+			} else if (input_array1[i] == ")") {
+					input_array1[i] = `<span class="brackets">)</span>`;
+			} else if (input_array1[i] == "%") {
+					input_array1[i] = `<span class="percent">%</span>`;
+			}
 	}
 
 	return input_array1.join("");
-}
-
-function CleanOutput(output1) {
-	let output_string1 = output1.toString();
-	let decimal1 = output_string1.split(".")[1];
-	output_string1 = output_string1.split(".")[0];
-
-	let output_array1 = output_string1.split("");
-
-	if (output_array1.length > 3) {
-		for (let i = output_array1.length - 3; i > 0; i -= 3) {
-			output_array1.splice(i, 0, ",");
-		}
-	}
-
-	if (decimal1) {
-		output_array1.push(".");
-		output_array1.push(decimal1);
-	}
-
-	return output_array1.join("");
 }
 
 function ValidateInput(value1) {
@@ -484,28 +501,16 @@ function ValidateInput(value1) {
 	let operators1 = ["+", "-", "*", "/"];
 
 	if (value1 == "." && last_input1 == ".") {
-		return false;
+			return false;
 	}
 
 	if (operators1.includes(value1)) {
-		if (operators1.includes(last_input1)) {
-			return false;
-		} else {
-			return true;
-		}
+			if (operators1.includes(last_input1)) {
+					return false;
+			} else {
+					return true;
+			}
 	}
 
 	return true;
-}
-
-function PerpareInput(input1) {
-	let input_array1 = input1.split("");
-
-	for (let i = 0; i < input_array1.length; i++) {
-		if (input_array1[i] == "%") {
-			input_array1[i] = "/100";
-		}
-	}
-
-	return input_array1.join("");
 }
